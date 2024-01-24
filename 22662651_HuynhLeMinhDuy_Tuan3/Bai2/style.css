@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+.container{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
 .header{
     width: 100%;
     display: flex;
@@ -13,7 +21,7 @@
 }
 
 .header__div--logo{
-    width: 23%;
+    width: 40%;
     display: flex;
 }
 
@@ -35,6 +43,8 @@
     align-self: center;
     font-size: 15px;
     margin-left: -5px;
+    width: 80%;
+    font-style: oblique;
 }
 
 .title--logo>h1{
@@ -45,23 +55,174 @@
     font-size: 17px;
 }
 
+.header__div--nav{
+    width: 60%;
+    margin-left: 10px;
+
+}
+
 .nav{
-    width: 77%;
+    width: 100%;
+    margin-right: 10px;
 }
 
 .nav>ul{
     display: flex;
     flex-direction: row;
-
 }
 
 .nav--menu{
     list-style-type: none;
+    margin: 20px;
+    background-color: rgb(74, 121, 174);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .menu--content{
     text-decoration: none;
     color: white;
-    font-size: 20px;
+    font-size: 25px;
     margin-right: 15px;
+}
+
+.search>form{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin-top: 10px;
+    padding-right: 10px;
+}
+
+::placeholder{
+    color: white;
+}
+
+.search--input{
+    padding: 5px;
+    margin-left: 20px;
+    background-color: rgb(59, 93, 132);
+    color: white;
+}
+
+.section{
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    flex-direction: row;
+    height: 400px;
+}
+
+.artical__div--left{
+    width: 70%;
+    float: left;
+    margin-right: 10px;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.artical__div--left--title{
+    float: left;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 3px dotted rgb(59, 93, 132);
+    width: 100%;
+}
+
+.artical__div--right--title{
+    float: left;
+    padding-bottom: 10px;
+    margin-bottom: 10px;    
+    border-bottom: 3px dotted rgb(59, 93, 132);
+    width: 100%;
+}
+
+.artical__div--left--content{
+    float: left;
+}
+
+.left--left{
+    width: 60%;
+    float: left;
+}
+
+.form--left>table{
+    width: 100%;
+}
+
+.left--right{
+    width: 38%;
+    float: left;
+    margin-left: 10px;
+}
+
+.title--right{
+    font-size: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 3px dotted rgb(59, 93, 132);
+}
+
+.content--right{
+    font-size: 15px;
+}
+
+.label{
+    font-size: 15px;
+    padding-top: 10px;
+}
+
+.text{
+    padding-bottom: 5px;
+}
+
+.btn{
+    width: 30%;
+}
+
+.artical__div--right{
+    width: 30%;
+    float: left;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFAF0;
+}
+
+.artical__div--right--img{
+    width: 100%;
+    height: 120px;
+    padding: 5px;
+    border: 2px solid rgb(59, 93, 132);
+}
+
+.artical__div--right--img>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.artical__div--right--content{
+    padding-top: 10px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.readmore{
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 18px;
+    color: blue;
+}
+
+.footer{
+    width: 100%;
+    height: 30px;
+    color: white;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(41,78,121,255);
 }
