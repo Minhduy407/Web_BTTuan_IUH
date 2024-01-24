@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="22662651 - Huỳnh Lê Minh Duy - Tuần 02" content="HTML - CSS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Bai1/style.css">
+    <title>Bài 1</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="header__h1--title">Example Cafe Menu</h1>
+        </header>
+        <!-- header -->
+        <nav class="navbar">
+            <ul class="navbar__ul">
+                <li class="navbar__li--list" style="border: none; padding-right: 0;"><a href="#" >
+                    <div id="navbar__li--list--img" ><img src="../Bai1/icons8-home-50.png" alt=""></div>
+                </a></li>
+                <li class="navbar__li--list"><a href="#Starters">Starters</a></li>
+                <li class="navbar__li--list"><a href="#">Main Courses</a></li>
+                <li class="navbar__li--list"><a href="#Desserts">Desserts</a></li>
+                <li class="navbar__li--list">
+                    <input type="text" style="font-size: 20px;">
+                    <button style="font-size: 20px;">Go</button>
+                </li>
+            </ul>
+        </nav>
+        <!-- Navbar -->
+        <div class="content">
+            <nav class="left-nav">
+                <ul class="left-nav__ul">
+                    <li class="left-nav__item"><a href=""></a>Coffee</li>
+                    <li class="left-nav__item"><a href=""></a>Spinach</li>
+                    <li class="left-nav__item"><a href=""></a>Ricotta Roulade</li>
+                    <li class="left-nav__item"><a href=""></a>Beef Tournados</li>
+                    <li class="left-nav__item"><a href=""></a>Dill</li>
+                    <li style="list-style: none;">
+                        <div id="left-nav__img">
+                            <img src="../Bai1/company.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <article class="article">
+                <div class="article__div--items">
+                    <span class="article__span--title" id="Starters">
+                        <h2>Starters</h2>
+                    </span>              
+                    <ul class="article__ul">
+                        <li class="article__li--items">Chestnut and Mushroom Goujons (<a href="#" class="article__links">v</a>)</li>
+                        <li class="article__li--items">Goat Cheese Salad (<a href="#" class="article__links">v</a>)</li>
+                        <li class="article__li--items" style="text-transform: uppercase;color: rgb(153, 127, 21);">Honey Soy Chicken Kebabs(<a href="#" class="article__links">v</a>)</li>
+                        <li class="article__li--items">Seafood Salad(<a href="#" class="article__links">v</a>)</li>
+                    </ul>
+                    <a href="#top" class="article__links" style="font-weight: bold; font-size: 22px;">Back to top</a>
+                </div>
+                
+                <div class="article__div--items">
+                    <span class="article__span--title" id="Desserts">
+                        <h2>Desserts</h2>
+                    </span>
+                        <ul class="article__ul">
+                            <li>Lemon Sorbet (<a href="#" class="article__links">v</a>)</li>
+                            <li>Chocolate Mud Pie (<a href="#" class="article__links">v</a>)</li>
+                            <li>Pecan Pie (<a href="#" class="article__links">v</a>)</li>
+                            <li>Selection of Fine Cheeses from Around the World(<a href="#" class="article__links">v</a>)</li>
+                        </ul>
+                    <a href="#top" class="article__links" style="font-weight: bold; font-size: 22px;">Back to top</a>
+                </div>
+                <div class="article__div--form">
+                    <span class="article__span--title">
+                        <h2 style="text-transform: uppercase;">Information</h2>
+                    </span>
+                    <form action="">
+                            <input type="text" placeholder="Fist Name" class="arcticle__input--infor">
+                        <input type="text" placeholder="Last Name" class="arcticle__input--infor">
+                        <input type="text" placeholder="E-Mail" class="arcticle__input--infor">
+                        <input type="text" placeholder="Telephone" class="arcticle__input--infor">
+                        <select name="hear us" class="arcticle__input--infor">
+                            <option value="1">USA</option>
+                            <option value="2">UK</option>
+                            <option value="3">JP</option>
+                        </select>
+                        <div class="arcticle__input--infor">
+                            <input type="radio" name="btn__radio" class="input_select" value="VN" class="radio__choose">
+                            <label for="" class="radio__choose">VN</label>
+                            <input type="radio" name="btn__radio" class="input_select" value="FRAn" class="radio__choose">
+                            <label for="" class="radio__choose">Foreign</label>
+                        </div>
+                        <div class="form__div--comment">
+                            <textarea name="" id="" cols="95" rows="4" placeholder="Content"></textarea>
+                        </div>
+                        <div class="form__div--button">
+                            <button class="btn">Submit</button>
+                            <button class="btn">Cancle</button>
+                        </div>
+                    </form>
+                </div>
+            </article>
+            <aside class="aside">
+                <div>
+                    <span class="aside__span--title"><h3>Events</h3></span>
+                </div>
+                <div class="aside__div--body">
+                    <div class="aside__div--card">
+                        <h4 class="aside__h4--title">Regular Meetings</h4>
+                        <div class="aside__div--img">
+                            <img src="../Bai1/meeting.png" alt="">
+                        </div>
+                        <p>Host your regular team meetings or activities in the comfort of your own private room. Charge up on Kith's aromatic coffee and delectable dishes for that extra boost in your work!</p>
+                        <a href="#" class="link_emty">Read More....</a>
+                    </div>
+                    <div class="aside__div--card">
+                        <h4 class="aside__h4--title">Product Launches</h4>
+                        <div class="aside__div--img">
+                            <img src="../Bai1/launch.png" alt="">
+                        </div>
+                        <p>Launch your product with ease in a space that truly fits its image. Create an unforgettable experience for your guests with our spacious outlets! Whether you want to host an intimate celebration or launch an event for hundreds of guests, Kith's space is customisable to your needs. <a href="#" class="link_emty">Read More....</a></p>
+                        <a href="#" class="link_emty">Read More....</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <!-- slide -->
+        <footer class="footer">
+            <address>ABC Comnpany - 12345678 - abccoffee@gmail.com</address>
+        </footer>
+        <!-- footer -->
+    </div>
+</body>
+
+</html>

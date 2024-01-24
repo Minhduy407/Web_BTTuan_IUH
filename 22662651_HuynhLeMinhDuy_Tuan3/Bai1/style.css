@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    margin: 0 auto;
+    width: 90%;
+    background: linear-gradient(to bottom, rgba(109,196,238,255), rgba(95,162,241,255));
+}
+
+.header{
+    width: 100%;
+    height: 80px;
+    border-bottom: 7px dotted white;
+}
+.nav{
+    width: 80%;
+    height: 80px;
+    float: left;
+}
+
+.nav_menu{
+    width: 100%;
+    height: 80px;
+}
+
+.items{
+    list-style-type: none;
+    float: left;
+    margin: 20px;
+    padding: 10px;
+}
+
+.items a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.title{
+    font-size: 20px;
+    color: white;
+    height: 80px;
+    float: left;
+    margin: 10px;
+    text-shadow: 1px 1px 2px black, 0 0 20px blue, 0 0 3px darkblue;
+}
+
+.content{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.artical__left{
+    width: 50%;
+    color: white;
+    margin-left: 20px;
+}
+
+.artical__left p{
+    margin-top: 10px;
+}
+
+.artical__right{
+    width: 50%;
+    
+}
+
+.form{
+    margin-left: 60px;
+}
+
+.label{
+    font-size: 15px;
+    padding-top: 10px;
+}
+
+.text{
+    border-radius: 5px;
+    width: 250px;
+}
+
+.btn{
+    border: 3px dotted rgb(167, 162, 162);
+    border-radius: 5px;
+}
+
+.img{
+    height: 280px;
+    width: 500px;
+}
+
+.img > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.img__content{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px 0 10px 30px;
+}
+
+.img__content>h2{
+    font-size: 25px;
+    color: blue;
+    text-shadow: 2px 2px 2px;
+}
+
+.img__content>p{
+    font-size: 15px;
+    color: blue;
+    margin-left: 10px;
+}
+
+.footer{
+    align-items: center;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    border: 7px dotted white;
+}
+
+.footer>address{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 400px;
+}

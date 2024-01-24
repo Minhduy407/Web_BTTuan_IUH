@@ -1,0 +1,173 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    min-width: 960px;
+    width: 80%;
+}
+
+.header{
+    width: 100%;
+    float: left;
+    height: 200px;
+    background-image: url(../Bai2/background.png);
+    background-repeat: repeat;
+}
+
+.header__div--logo{
+    width: 10%;
+    height: 150px;
+    float: left;
+    margin: 20px 0;
+}
+
+.header__div--logo>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header__div--title{
+    width: 90%;
+    color: white;
+    margin-top: 70px;
+    align-items: start;
+    float: left;
+    padding-left: 20px;
+}
+
+.header__div--title>h1{
+    font-size: 50px;
+}
+
+.header__div--title>span{
+    font-size: 25px;
+}
+
+.navbar{
+    height: 50px;
+    width: 100%;
+    background-color: rgba(178,174,171,255);
+    float: left;
+}
+
+.navbar > ul{
+    text-align: start;
+}
+
+.nav__li--menu{
+    list-style: none;
+    display: inline-block;
+    line-height: 40px;
+    font-size: 25px;
+    padding: 0 20px;
+    margin-top: 5px;
+}
+
+.nav__li--menu>a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav__li--menu>a:hover{
+    cursor: pointer;
+    color: black;
+}
+
+.section__article{
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+}
+
+.article__div--img{
+    padding: 3px;
+}
+
+.article__div--img>h4{
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.article__div--img>div{
+    width: 450px;
+    height: 300px;
+}
+
+.article__div--img>div>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content{
+    width: 67%;
+    float: left;
+}
+
+.article__div--content{
+    margin-top: 50px;
+    margin-left: 30px;
+}
+.article__div--content>h2{
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.article__div--content>h3{
+    font-size: 30px;
+    color: red;
+}
+
+.article__div--content>p{
+    font-size: 25px;
+    margin-top: 40px;
+}
+
+.aside{
+    width: 33%;
+    padding: 60px 50px;
+    height: 100%;
+    float: left;
+}
+
+.aside>ul{
+    margin-left: 10px;
+    padding-top: 30px;
+}
+
+.aside__li--content{
+    font-size: 30px;
+    padding-bottom: 10px;
+    margin: 20px 0; 
+    color: red;
+    list-style: none;
+}
+
+.aside>h2{
+    font-size: 35px;
+    color: red;
+    margin-top: 10px;
+}
+
+.aside__li--links{
+    list-style: none;
+    font-size: 25px;
+}
+
+.footer{
+    width: 100%;
+    height: 40px;
+    float: left;
+    background-color: rgba(178,174,171,255);
+}
+
+.footer>address{
+    font-size: 20px;
+    color: white;
+    margin-top: 17px;
+    margin-left: 10px;
+}
