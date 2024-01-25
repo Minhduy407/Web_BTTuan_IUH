@@ -126,15 +126,12 @@
     align-items: center;
     align-self: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     height: 50px;
     border: 7px dotted white;
 }
 
-.footer>address {
+.footer--title {
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 400px;
 }
