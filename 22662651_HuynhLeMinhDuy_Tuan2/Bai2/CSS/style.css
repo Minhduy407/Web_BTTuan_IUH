@@ -13,7 +13,7 @@
     width: 100%;
     float: left;
     height: 200px;
-    background-image: url(../Bai2/background.png);
+    background-image: url(../IMG/background.png);
     background-repeat: repeat;
 }
 
@@ -84,6 +84,7 @@
 }
 
 .article__div--img{
+    border: 1px solid gray;
     padding: 3px;
 }
 
@@ -132,6 +133,7 @@
     padding: 60px 50px;
     height: 100%;
     float: left;
+    border-left: 2px solid gray;
 }
 
 .aside>ul{
@@ -141,6 +143,7 @@
 
 .aside__li--content{
     font-size: 30px;
+    border-bottom: 1px solid gray;
     padding-bottom: 10px;
     margin: 20px 0; 
     color: red;

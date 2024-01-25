@@ -5,20 +5,21 @@
 }
 
 body{
-    margin: 0 auto;
+    margin:  0 auto;
     display: flex;
     justify-content: center;
 }
 
-.container{
+#wrapper{
     width: 960px;
+    /* height: 100vh; */
+    background-image: url(../IMG/background.jpg);
+    background-repeat: repeat;
     padding: 10px;
     display: block;
-    background-image: url(../Bai3/background.jpg);
-    background-repeat: repeat;
 }
 
-.nav{
+#links{
     width: 20%;
     background-color: white;
     color: purple;
@@ -28,31 +29,34 @@ body{
     height: 250px;
     box-shadow: inset -5px -5px 10px rgb(87, 87, 87);
 }
-
-.link_page{
+.link__page{
     margin-bottom: 20px;
 }
 
-.link_page > a{
+.link__page > a{
     margin: 20px 0;
     text-decoration: none;
     font-size: 20px;
 }
 
-.noidung .title{
+#noidung .title{
     color: white;
+
 }
 
-.section{
+#content{
     display: flex;
     margin-top: 20px;
 }
 
-.noidung{
+#noidung{
     border-left: 2px solid green;
     width: 80%;
     color: white;
+    /* padding: 10px; */
+    /* margin-left: 20px; */
     padding-left: 20px;
+    /* margin-top: 20px; */
 }
 
 #title{
@@ -64,7 +68,7 @@ body{
     letter-spacing: 10px;
 }
 
-.image {
+#content__img{
     display: flex;
 }
 
@@ -74,12 +78,11 @@ body{
     padding-left: 10px;
     margin: 20px 0;
 }
-
 .list{
     padding-left: 40px;
 }
 
-.footer{
+#footer{
     color: white;
     text-align: center;
     border-top: 5px solid green;
