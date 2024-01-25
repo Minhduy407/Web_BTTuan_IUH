@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1280px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #ad4c15;
+    width: 100%;
+}
+
+.header--title {
+    color: #857d00;
+    padding: 10px;
+    text-shadow: -4px -4px 5px white;
+}
+
+nav {
+    width: 100%;
+}
+
+.nav--menu ul li {
+    float: left;
+    padding: 0 10px;
+    list-style-type: none;
+}
+
+.nav--menu--a {
+    text-decoration: none;
+    color: rgba(189, 148, 108, 255);
+}
+
+.section--header {
+    width: 100%;
+}
