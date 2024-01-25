@@ -28,15 +28,22 @@ nav {
 
 .nav--menu ul li {
     float: left;
-    padding: 0 10px;
+    padding: 0 20px;
     list-style-type: none;
 }
 
 .nav--menu--a {
     text-decoration: none;
     color: rgba(189, 148, 108, 255);
+    font-size: 20px;
 }
 
-.section--header {
+.section--header{
+    height: 200px;
     width: 100%;
+}
+
+.section--header img{
+    width: 100%;
+    object-fit: cover;
 }
