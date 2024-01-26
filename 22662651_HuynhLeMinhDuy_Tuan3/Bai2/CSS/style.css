@@ -9,6 +9,7 @@
     margin: auto;
     display: flex;
     flex-direction: column;
+    font-family: 'Poppins', sans-serif;
 }
 
 .header {
@@ -43,7 +44,7 @@
     font-size: 15px;
     margin-left: -5px;
     width: 80%;
-    font-style: oblique;
+    font-family: 'Poppins', sans-serif;
 }
 
 .title--logo h1 {
@@ -115,7 +116,7 @@
     display: flex;
     margin-top: 20px;
     flex-direction: row;
-    height: 400px;
+    height: 500px;
 }
 
 .artical__div--left {
@@ -170,7 +171,6 @@
 
 .title--right {
     color: rgba(189, 148, 108, 255);
-    font-size: 20px;
     padding-bottom: 10px;
     margin-bottom: 10px;
     border-bottom: 3px dotted rgb(59, 93, 132);
