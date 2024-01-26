@@ -38,6 +38,11 @@ nav {
     font-size: 20px;
 }
 
+section {
+    width: 100%;
+    height: 700px;
+}
+
 .section--header{
     height: 200px;
     width: 100%;
@@ -109,6 +114,7 @@ nav {
 .aside--header1{
     color: #53412f;
     padding: 2px 0 20px 20px;
+    letter-spacing: 5px;
 }
 
 .aside--list ul{
@@ -123,17 +129,14 @@ nav {
 .aside--header2{
     color: #53412f;
     margin: 10px 50px 0 70px;
-}
-
-.aside{
-    height: 436px;
+    width: 100%;
+    letter-spacing: 5px;
 }
 
 .img{
-    width: 30%;
-    
+    width: 100px;
     border: 1px solid #dfdfdf;
-    
+    float: left;
 }
 
 .img img{
@@ -144,14 +147,43 @@ nav {
 }
 
 .aside--content{
-    height: 282px;
+    display: flex;
+    flex-direction: column;
 }
 
-.content{
-    float: left;    
+.content{    
+    font-size: 18px;
+    display: inline;
+    color: #53412f;
+    line-height: 30px;
 }
 
 .aside--content--img{
-    margin: 20px 20px 0 70px;
+    margin: 20px 75px 0 70px;
     height: 260px;
+}
+
+footer p, footer span{
+    font-size: 25px;
+    color: #53412f;
+}
+
+footer p{
+    border-right: 1px solid #53412f;
+    padding-right: 20px;
+    margin-left: 100px;
+}
+
+footer span{
+    margin-left: 10px;
+}
+
+footer{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: left;
+    align-items: center;
+    background: url(../IMG/corner1.png) left top no-repeat, url(../IMG/corner2.png) left bottom no-repeat, url(../IMG/footer.png) left top no-repeat,url(../IMG/footer.png) right top no-repeat,url(../IMG/footer.png) center top no-repeat,url(../IMG/footer.png) left top repeat-x, url(../IMG/corner3.png) right top no-repeat,url(../IMG/corner4.png) right bottom no-repeat;
+    background-size: 50px 35px,60px 35px,250px 15px,250px 15px,250px 15px,250px 15px,100px 35px,110px 35px;
 }
