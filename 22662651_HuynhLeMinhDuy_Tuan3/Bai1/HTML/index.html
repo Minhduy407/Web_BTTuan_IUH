@@ -11,78 +11,84 @@
 
 <body>
     <div class="container">
-        <div class="header">
-            <div class="nav">
-                <ul class="nav_menu">
-                    <li class="items"><a href="#">Home</a></li>
-                    <li class="items"><a href="#">Products</a></li>
-                    <li class="items"><a href="#">Services</a></li>
-                    <li class="items"><a href="#">About</a></li>
-                    <li class="items"><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            <div class="title">
+        <div class="nav">
+            <ul class="nav-menu">
+                <li class="link"><a class="link-title" href="#">Home</a></li>
+                <li class="link"><a class="link-title" href="#">Products</a></li>
+                <li class="link"><a class="link-title" href="#">Services</a></li>
+                <li class="link"><a class="link-title" href="#">About</a></li>
+                <li class="link"><a class="link-title" href="#">Contact</a></li>
+            </ul>
+            <div class="header-title">
                 <h1>Sky World</h1>
             </div>
         </div>
-        <div class="content">
-            <div class="artical__left">
-                <h2>Registration Information</h2>
-                <p>Start your travel planning now with our on-line tour regstration form. Just tell us a little about yourself and your group and one of our travel experts will contact you to create the perfect custom built for your group's needs .</p>
-                <div class="form">
-                    <table>
+        <div class="artical">
+            <div class="left-artical">
+                <h2>
+                    Registration information
+                </h2>
+                <p>
+                    Start your travel planning now with our on-line 
+                    tour regstration form. Just tell us a little about 
+                    yourself and your group and one of our travel experts 
+                    will contact you to create 
+                    the perfect custom built for your group's needs .
+                </p>
+                <table>
+                    <tbody>
                         <tr>
-                            <td class="label"><label for="title">Title</label></td>
-                            <td class="text">
-                                <select name="title" class="text" id="title" style="width: 50px;">
-                                <option value="Mr">Mr</option>
-                                <option value="Mrs">Mrs</option>
-                                <option value="Ms">Ms</option>
+                            <td class="form-td">Title</td>
+                            <td class="form-td">
+                                <select name="title" class="text" id="title" style="min-width: 30px;">
+                                    <option value="Mr">Mr</option>
+                                    <option value="Mrs">Mrs</option>
+                                    <option value="Ms">Ms</option>
                                 </select>
                             </td>
                         </tr>
                         <tr>
-                            <td class="label"><label for="name">Full Name*</label></td>
-                            <td class="text"><input type="text" name="name" id="name" class="text" placeholder="First Name"></td>
+                            <td class="form-td">Full Name*</td>
+                            <td class="form-td"><input type="text" id="title" placeholder="First Name"></td>
                         </tr>
                         <tr>
-                            <td class="label"><label for="address">Mailling Address</label></td>
-                            <td class="text"><input type="text" name="address" id="address" class="text" placeholder="Mailling Address"></td>
+                            <td class="form-td">Mailling Address</td>
+                            <td class="form-td"><input type="text" id="title" placeholder="Mailling Address"></td>
                         </tr>
                         <tr>
-                            <td class="label"><label for="city">City</label></td>
-                            <td class="text"><input type="text" name="city" id="city" class="text" placeholder="City"></td>
+                            <td class="form-td">City</td>
+                            <td class="form-td"><input type="text" id="title" placeholder="City"></td>
                         </tr>
                         <tr>
-                            <td class="label"><label for="country">Country</label></td>
-                            <td class="text"><input type="text" name="country" id="country" class="text" placeholder="Country"></td>
+                            <td class="form-td">Country</td>
+                            <td class="form-td"><input type="text" id="title" placeholder="Country"></td>
                         </tr>
                         <tr>
-                            <td class="label"><label for="ques">Specific question or request about your tour</label></td>
-                            <td class="text"><textarea name="ques" class="text" id="ques" cols="21" rows="5"></textarea></td>
+                            <td class="form-td" style="max-width: 230px;">Specific question or request about your tour</td>
+                            <td class="form-td"><textarea name="ques" id="title" cols="20" rows="5" placeholder="Specific question or request about your tour"></textarea></td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td><button type="submit" class="btn">Submit</button>
-                                <button type="reset" class="btn">Reset</button>
+                            <td class="form-btn"><button type="submit" id="btn">Submit</button>
+                            <button type="reset" id="btn">Reset</button>
                             </td>
                         </tr>
-                    </table>
-                </div>
+                    </tbody>
+                </table>
             </div>
-            <div class="artical__right">
-                <div class="img">
-                    <img src="../IMG/sky.png" alt="">
+            <div class="right-artical">
+                <div class="image">
+                    <img src="../IMG/sky.png" alt="sky">
                 </div>
-                <div class="img__content">
-                    <h2>Your've arrived.</h2>
-                    <p>Journeys as great as the destinations.</p>
+                <div class="image-title">
+                    <h2>You've arrived.</h2>
+                    <span>Journeys as great as the destinations.</span>
                 </div>
             </div>
         </div>
         <div class="footer">
-            <p class="footer--title">2016 Sky World Tours. All rights reserved.</p>
-            <p class="footer--title">Contact information: Student Name | StudentID | Testing Date</p>
+            <p style="padding-left: 10rem;">2016 Sky World Tours. All rights reserved.</p>
+            <p style="padding-left: 5rem;">Contact information: Student Name | StudentID | Testing Date</p>
         </div>
     </div>
 </body>
