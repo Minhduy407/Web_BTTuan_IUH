@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: row;
     height: 120px;
-    background-color: rgba(41, 78, 121, 255);
+    background-color: #29507b;
 }
 
 .header__div--logo {
@@ -73,7 +73,7 @@
 .nav--menu {
     list-style-type: none;
     margin: 20px;
-    background-color: rgb(74, 121, 174);
+    background-color: #3b73af;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,7 +107,7 @@
 .search--input {
     padding: 5px;
     margin-left: 20px;
-    background-color: rgb(59, 93, 132);
+    background-color: #23344f;
     color: white;
 }
 
@@ -142,7 +142,7 @@
     margin-bottom: 10px;
     border-bottom: 3px dotted rgb(59, 93, 132);
     width: 100%;
-    color: rgba(189, 148, 108, 255);
+    color: #f8f8f8;
 }
 
 .artical__div--left--content {
@@ -200,7 +200,7 @@
     margin-left: 20px;
     display: flex;
     flex-direction: column;
-    background-color: #FFFAF0;
+    background-color: #f8f8f8;
 }
 
 .artical__div--right--img {
@@ -237,5 +237,10 @@
     font-size: 15px;
     display: flex;
     align-items: center;
-    background-color: rgba(41, 78, 121, 255);
+    background-color: #203553;
+}
+
+#read {
+    text-decoration: none;
+    color: blue;
 }
