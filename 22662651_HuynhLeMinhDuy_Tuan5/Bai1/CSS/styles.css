@@ -73,3 +73,8 @@
     background-color: rgba(214,195,245,255);
 }
 
+footer img{
+    object-fit: cover;
+    width: 100%;
+}
+

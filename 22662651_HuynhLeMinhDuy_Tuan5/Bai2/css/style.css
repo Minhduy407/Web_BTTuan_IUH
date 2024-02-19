@@ -1,0 +1,38 @@
+.container{
+    min-width: 1300px;
+    min-height: 80vh;
+    background-image: url(../images/hero-bg.jpg);
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+}
+
+nav{
+    max-height: 80px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 10rem;
+}
+
+.nav-title{
+    color: white;
+}
+
+.navbar{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding-left: 25rem;
+}
+
+.navbar>li a{
+    text-decoration: none;
+    color: white;
+}
+
+article{
+    padding-left: 10rem;
+    padding-top: 11rem;
+    color: white;
+}
