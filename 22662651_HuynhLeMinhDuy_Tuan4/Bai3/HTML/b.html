@@ -21,18 +21,43 @@
             color: black !important; /* Màu chữ đen */
             border: none !important; /* Bỏ viền */
         }
+        *[col-]{
+            padding: 0;
+            margin: 0 auto !important;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#authModal">
-            Open Login/Register Modal
-        </button>
+    <div class="container" >
+        <header>
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="#"><img src="../IMG/logo.png" alt="logo" style="width: 100%;height: 100%;"></a>
+                </div>
+                <div class="col-md-6">
+                    <nav class="nav" style="margin-top: 1.8rem;">
+                        <a class="nav-link" aria-current="page" href="#">Phim</a>
+                        <a class="nav-link" href="#">Góc Điện Ảnh</a>
+                        <a class="nav-link" href="#">Sự Kiện</a>
+                        <a class="nav-link" href="#">Rạp/Giá Vé</a>
+                      </nav>
+                </div>
+                <div class="col-md-3">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#authModal" style="margin-top: 1.2rem;">
+                        <img src="../IMG/timkiem.png" style="object-fit: cover;">
+                    </button>
+                </div>
+            </div>
+        </header>
+        <section>
+            <img src="../IMG/background.png" alt="banner" style="width: 100%;height: 100%;">
+        </section>
+        
         
         <!-- Auth Modal -->
-        <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
+        <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true" >
+            <div class="modal-dialog modal-dialog-centered" >
                 <div class="modal-content">
 
                     <!-- Modal Header -->
@@ -50,40 +75,98 @@
                     </div>
 
                     <!-- Modal Body -->
-                    <div class="modal-body">
+                    <div class="modal-body" style="padding-top: 0;">
                         <!-- Tab Content -->
                         <div class="tab-content mt-3">
                             <!-- Login Tab -->
                             <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
                                 <form>
-                                    <div class="mb-3">
-                                        <label for="loginEmail" class="form-label">Email address</label>
-                                        <input type="email" class="form-control" id="loginEmail" required>
+                                    <div class="container">
+                                        <div class="mb-3">
+                                            <span style="color: rgb(54, 50, 50);font-size: 14px;">Vui lòng đăng nhập trước khi mua vé đã tích lũy điểm, cơ hội nhận thêm nhiều ưu đãi từ chương trình thành viên Galaxy Cinema</span>    
+                                        </div>
+                                        <div class="mb-3">
+                                            
+                                            <input type="email" class="form-control" id="loginEmail" placeholder="Email" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            
+                                            <input type="password" class="form-control" id="loginPassword" placeholder="Mật khẩu" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <a href="#" style="text-decoration: none;color: rgb(42, 38, 38);">Quên mật khẩu ?</a>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary" style="width: 100%;background-color: #f46b3b;">ĐĂNG NHẬP</button>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="loginPassword" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="loginPassword" required>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Login</button>
                                 </form>
                             </div>
 
                             <!-- Register Tab -->
                             <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
                                 <form>
-                                    <div class="mb-3">
-                                        <label for="registerEmail" class="form-label">Email address</label>
-                                        <input type="email" class="form-control" id="registerEmail" required>
+                                    <div class="container">
+                                        <div class="form-group" style="margin-bottom: 1rem;"> 
+                                            <input type="text" class="form-control" id="name" placeholder="Họ tên">
+                                        </div>
+                                        <div class="row" style="margin-bottom: 1rem;">
+                                            <div class="col-md-6">
+                                                <input type="tel" class="form-control" id="phone" placeholder="Số điện thoại">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <select class="form-control" id="gender">
+                                                    <option>Chọn giới tính</option>
+                                                    <option>Nam</option>
+                                                    <option>Nữ</option>
+                                                    <option>Khác</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row" style="margin-bottom: 1rem;">
+                                            <div class="col-md-6">
+                                                <input type="password" class="form-control" id="password" placeholder="Mật khẩu">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="password" class="form-control" id="confirmPassword" placeholder="Xác nhận mật khẩu">
+                                            </div>
+                                        </div>
+                                        <div class="row" style="margin-bottom: 1rem;">
+                                            <div class="col-md-6">
+                                                <select class="form-control" id="city">
+                                                    <option>Thành phố</option>
+                                                    <option>Hồ Chí Minh</option>
+                                                    <option>Hà Nội</option>
+                                                    <!-- Thêm các thành phố khác vào đây -->
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <select class="form-control" id="district">
+                                                    <option>Quận</option>
+                                                    <option>Quận 1</option>
+                                                    <option>Quận 2</option>
+                                                    <!-- Thêm các quận khác vào đây -->
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group" style="margin-bottom: 1rem;">
+                                            <input type="text" class="form-control" id="address" placeholder="Nhập địa chỉ">
+                                        </div>
+                                        <div class="form-group" style="margin-bottom: 1rem;">
+                                            <input type="date" class="form-control" id="dob" placeholder="Chọn ngày (dd/mm/yyyy)">
+                                        </div>
+                                        <div class="form-group" style="margin-bottom: 1rem;">
+                                            
+                                            <div class="input-group">
+                                                
+                                                <img src="../IMG/capcha.jpg">
+                                                <input type="text" class="form-control" id="captcha" placeholder="Nhập mã Captcha" style="margin-left: 1rem;" readonly>
+                                            </div>
+                                        </div>
+                                        <span>Tôi đã đọc và đồng ý với <a href="#" style="text-decoration: none;color: #f46b3b;"><b>CHÍNH SÁCH</b></a> của chương trình.</span>
+                                        <button type="submit" class="btn btn-primary btn-block" style="width: 100%;background-color: #f46b3b;">ĐĂNG KÝ</button>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="registerPassword" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="registerPassword" required>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Register</button>
                                 </form>
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
