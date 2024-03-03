@@ -1,0 +1,44 @@
+body{
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container__card img{
+    cursor: pointer;
+}
+
+.nav-link.active {
+    color: orange !important; /* Màu chữ cam */
+    border: none !important; /* Bỏ viền */
+    border-bottom: 2px solid orange !important; /* Thêm đường gạch chân màu cam */
+}
+
+/* Thêm màu cho liên kết chưa được chọn */
+.nav-link:not(.active) {
+    color: black !important; /* Màu chữ đen */
+    border: none !important; /* Bỏ viền */
+}
+*[col-]{
+    padding: 0;
+    margin: 0 auto !important;
+}
+
+.banner img{
+    width: 100%;
+    object-fit: cover;
+    z-index: 99;
+}
+
+.nav__body{
+    z-index: 100;
+    border: 0.1rem solid rgb(181, 156, 156);
+    position: absolute;
+    top: calc(73%);
+    left: 30%;
+}
+
+.nav__body ul li a{
+    padding-right: 10rem;
+}

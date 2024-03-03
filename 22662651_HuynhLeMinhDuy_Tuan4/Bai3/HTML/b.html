@@ -6,40 +6,22 @@
     <meta name="22662651 - Huỳnh Lê Minh Duy - Tuần 04" content="HTMLL - CSS - Bootstrap">
     <title>Bai3_B</title>
     <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/style_3b.css">
     <script src="../JS/bootstrap.min.js"></script>
-
-    <style>
-        /* Thêm màu cho liên kết được chọn */
-        .nav-link.active {
-            color: orange !important; /* Màu chữ cam */
-            border: none !important; /* Bỏ viền */
-            border-bottom: 2px solid orange !important; /* Thêm đường gạch chân màu cam */
-        }
-
-        /* Thêm màu cho liên kết chưa được chọn */
-        .nav-link:not(.active) {
-            color: black !important; /* Màu chữ đen */
-            border: none !important; /* Bỏ viền */
-        }
-        *[col-]{
-            padding: 0;
-            margin: 0 auto !important;
-        }
-    </style>
 </head>
 <body>
-    <div class="container" >
+    <div class="container">
         <header>
             <div class="row">
                 <div class="col-md-3">
-                    <a href="#"><img src="../IMG/logo.png" alt="logo" style="width: 100%;height: 100%;"></a>
+                    <a href="#"><img src="../IMG/logo.png" alt="logo" style="width: 100%;height: 100%;cursor: pointer;"></a>
                 </div>
                 <div class="col-md-6">
                     <nav class="nav" style="margin-top: 1.8rem;">
-                        <a class="nav-link" aria-current="page" href="#">Phim</a>
-                        <a class="nav-link" href="#">Góc Điện Ảnh</a>
-                        <a class="nav-link" href="#">Sự Kiện</a>
-                        <a class="nav-link" href="#">Rạp/Giá Vé</a>
+                        <a class="nav-link nav__header" aria-current="page" href="#">Phim</a>
+                        <a class="nav-link nav__header" href="#">Góc Điện Ảnh</a>
+                        <a class="nav-link nav__header" href="#">Sự Kiện</a>
+                        <a class="nav-link nav__header" href="#">Rạp/Giá Vé</a>
                       </nav>
                 </div>
                 <div class="col-md-3">
@@ -51,7 +33,180 @@
             </div>
         </header>
         <section>
-            <img src="../IMG/background.png" alt="banner" style="width: 100%;height: 100%;">
+            <div class="container banner">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src="../IMG/banner.jpg" alt="banner">
+                    </div>
+                </div>
+            </div>
+            <div class="nav__body">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <div class="container-fluid">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">1 Chọn Phim</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" aria-disabled="true"><span class="text-secondary">2 Chọn Rạp</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" aria-disabled="true"><span class="text-secondary">3 Chọn Ngày</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" aria-disabled="true"><span class="text-secondary">4 Chọn Suất</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" style="background-color: #f8ac6e;" aria-disabled="true"><span class="text-secondary">Mua vé nhanh</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        <section style="margin-top: 50px;">
+            <div class="container">
+                <ul class="nav nav-tabs" id="authTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" data-bs-toggle="tab" href="#phimdangchieu" role="tab" aria-controls="phimdangchieu" aria-selected="true">PHIM ĐANG CHIẾU</a>
+                    </li>
+                    <span class="input-group-text" id="basic-addon1" style="background-color: white;border: none;">/</span>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" data-bs-toggle="tab" href="#phimsapchieu" role="tab" aria-controls="phimsapchieu" aria-selected="false">PHIM SẮP CHIẾU</a>
+                    </li>
+                    <span class="input-group-text" id="basic-addon1" style="background-color: white;border: none;">/</span>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" data-bs-toggle="tab" href="#phimImax" role="tab" aria-controls="phimImax" aria-selected="false">PHIM IMAX</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section style="margin-top: 50px;">
+            <div class="container container__card">
+                <div class="tab-content mt-3">
+                    <div class="tab-pane fade show active" id="phimdangchieu" role="tabpanel" aria-labelledby="phimdangchieu-tab">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="card" style="width: 100%;">
+                                    <img src="../IMG/Mai.jpg" class="card-img-top" alt="...">
+                                    <div class="row">
+                                        <div class="col-md-6"><a href="#" class="btn btn-primary">Giới Thiệu</a></div>
+                                        <div class="col-md-6"><a href="#" class="btn btn-light">Đặt lịch ngay</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card" style="width: 100%;">
+                                    <img src="../IMG/gaokaichibau.jpg" class="card-img-top" alt="...">
+                                    <div class="row">
+                                        <div class="col-md-6"><a href="#" class="btn btn-primary">Giới Thiệu</a></div>
+                                        <div class="col-md-6"><a href="#" class="btn btn-light">Đặt lịch ngay</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card" style="width: 100%;">
+                                    <img src="../IMG/dune.jpg" class="card-img-top" alt="...">
+                                    <div class="row">
+                                        <div class="col-md-6"><a href="#" class="btn btn-primary">Giới Thiệu</a></div>
+                                        <div class="col-md-6"><a href="#" class="btn btn-light">Đặt lịch ngay</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card" style="width: 100%;">
+                                    <img src="../IMG/thosan.jpg" class="card-img-top" alt="...">
+                                    <div class="row">
+                                        <div class="col-md-6"><a href="#" class="btn btn-primary">Giới Thiệu</a></div>
+                                        <div class="col-md-6"><a href="#" class="btn btn-light">Đặt lịch ngay</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="phimsapchieu" role="tabpanel" aria-labelledby="phimsapchieu-tab">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="card" style="width: 100%;">
+                                    <img src="../IMG/Mai.jpg" class="card-img-top" alt="...">
+                                    <div class="row">
+                                        <div class="col-md-6"><a href="#" class="btn btn-primary">Giới Thiệu</a></div>
+                                        <div class="col-md-6"><a href="#" class="btn btn-light">Đặt lịch ngay</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card" style="width: 100%;">
+                                    <img src="../IMG/gaokaichibau.jpg" class="card-img-top" alt="...">
+                                    <div class="row">
+                                        <div class="col-md-6"><a href="#" class="btn btn-primary">Giới Thiệu</a></div>
+                                        <div class="col-md-6"><a href="#" class="btn btn-light">Đặt lịch ngay</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card" style="width: 100%;">
+                                    <img src="../IMG/dune.jpg" class="card-img-top" alt="...">
+                                    <div class="row">
+                                        <div class="col-md-6"><a href="#" class="btn btn-primary">Giới Thiệu</a></div>
+                                        <div class="col-md-6"><a href="#" class="btn btn-light">Đặt lịch ngay</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card" style="width: 100%;">
+                                    <img src="../IMG/thosan.jpg" class="card-img-top" alt="...">
+                                    <div class="row">
+                                        <div class="col-md-6"><a href="#" class="btn btn-primary">Giới Thiệu</a></div>
+                                        <div class="col-md-6"><a href="#" class="btn btn-light">Đặt lịch ngay</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="phimImax" role="tabpanel" aria-labelledby="phimImax-tab">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="card" style="width: 100%;">
+                                    <img src="../IMG/Mai.jpg" class="card-img-top" alt="...">
+                                    <div class="row">
+                                        <div class="col-md-6"><a href="#" class="btn btn-primary">Giới Thiệu</a></div>
+                                        <div class="col-md-6"><a href="#" class="btn btn-light">Đặt lịch ngay</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card" style="width: 100%;">
+                                    <img src="../IMG/gaokaichibau.jpg" class="card-img-top" alt="...">
+                                    <div class="row">
+                                        <div class="col-md-6"><a href="#" class="btn btn-primary">Giới Thiệu</a></div>
+                                        <div class="col-md-6"><a href="#" class="btn btn-light">Đặt lịch ngay</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card" style="width: 100%;">
+                                    <img src="../IMG/dune.jpg" class="card-img-top" alt="...">
+                                    <div class="row">
+                                        <div class="col-md-6"><a href="#" class="btn btn-primary">Giới Thiệu</a></div>
+                                        <div class="col-md-6"><a href="#" class="btn btn-light">Đặt lịch ngay</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card" style="width: 100%;">
+                                    <img src="../IMG/thosan.jpg" class="card-img-top" alt="...">
+                                    <div class="row">
+                                        <div class="col-md-6"><a href="#" class="btn btn-primary">Giới Thiệu</a></div>
+                                        <div class="col-md-6"><a href="#" class="btn btn-light">Đặt lịch ngay</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         
         
