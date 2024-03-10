@@ -1,10 +1,4 @@
 body {
-    color: #0c0c0c;
-    background-color: #ffffff;
-    overflow-x: hidden;
-}
-
-.container {
     background-image: url(../images/hero-bg.jpg);
     background-size: cover;
 }
@@ -18,8 +12,83 @@ body {
     margin: 0 10px;
 }
 
+#navbarSupportedContent li {
+    margin: 0 10px;
+}
+
 #navbarSupportedContent a,
 #navbarSupportedContent i,
 .navbar-brand span {
     color: white;
+    font-size: 1.3rem;
 }
+
+.btn1{
+    text-decoration: none;
+}
+
+.slider_section {
+    display: flex;
+    position: relative;
+    padding: 100px 0 75px 0;
+  }
+  
+.slider_section #customCarousel1{
+    width: 100%;
+}
+
+.carousel-indicators li{
+    margin: 0 2px;
+    list-style: none;
+}
+
+  .slider_section .detail-box {
+    color: #ffffff;
+    margin-bottom: 145px;
+  }
+  
+  .slider_section .detail-box h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .slider_section .detail-box p {
+    font-size: 14px;
+  }
+  
+  .slider_section .detail-box a {
+    display: inline-block;
+    padding: 10px 45px;
+    background-color: #ffbe33;
+    color: #ffffff;
+    border-radius: 45px;
+    border: none;
+    margin-top: 10px;
+  }
+  
+  .slider_section .detail-box a:hover {
+    background-color: #e69c00;
+  }
+  
+  .slider_section .carousel-indicators {
+    position: unset;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .slider_section .carousel-indicators li {
+    background-color: #ffffff;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    opacity: 1;
+  }
+  
+  .slider_section .carousel-indicators li.active {
+    width: 20px;
+    height: 20px;
+    background-color: #ffbe33;
+  }
