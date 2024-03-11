@@ -4,135 +4,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="22662651 - Huỳnh Lê Minh Duy - Tuan05" content="HTMLL - CSS - Bootstrap ">
+    <title>Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
 </head>
 
-<body>
+<body style="background-image: url(../images/hero-bg.jpg);
+background-size: cover;">
     <div class="container">
-        <header class="header_section">
-            <div class="container">
-                <nav class="navbar navbar-expand-lg custom_nav-container ">
-                    <a class="navbar-brand" href="home.html">
-                        <span style="font-family: Dancing Script, cursive, sans-serif;font-size: 2rem">
-                            Feane
-                        </span>
-                    </a>
-
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class=""> </span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav  mx-auto ">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="menu.html">Menu</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="book.html">Book Table</a>
-                            </li>
-                        </ul>
+      <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg custom_nav-container ">
+                <a class="navbar-brand" href="home.html">
+                    <span>
+                      Feane
+                    </span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" id="reponsive-btn">
+                    <span class="navbar-toggler-icon" ></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav  mx-auto">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="menu.html">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="book.html">Book Table</a>
+                        </li>
+                    </ul>
+                    <div class="options">
+                        <a href="" class="user_link" style="color: white;">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </a>
+                        <a class="cart_link" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>    
+                        </a>
                         <form class="form-inline">
-                            <a href="" class="user_link">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                            </a>
                             <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                                <i class="fa fa-search" aria-hidden="true"></i>
+                              <i class="fa fa-search" aria-hidden="true" style="color: white;"></i>
                             </button>
                         </form>
-                        <a href="" class="order_online">
+                        <a href="order.html" class="order_online">
                             Order Online
                         </a>
                     </div>
-                </nav>
-            </div>
-        </header>
-        <section class="slider_section ">
-            <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div class="container ">
-                    <div class="row">
-                      <div class="col-md-7 col-lg-6 ">
-                        <div class="detail-box">
-                          <h1 style="font-family: Dancing Script, cursive, sans-serif;">
-                            Fast Food Restaurant
-                          </h1>
-                          <p>
-                            Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
-                          </p>
-                          <div class="btn-box">
-                            <a href="" class="btn1">
-                              Order Now
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-                <div class="carousel-item ">
-                  <div class="container ">
-                    <div class="row">
-                      <div class="col-md-7 col-lg-6 ">
-                        <div class="detail-box">
-                          <h1>
-                            Fast Food Restaurant
-                          </h1>
-                          <p>
-                            Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
-                          </p>
-                          <div class="btn-box">
-                            <a href="" class="btn1">
-                              Order Now
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="container ">
-                    <div class="row">
-                      <div class="col-md-7 col-lg-6 ">
-                        <div class="detail-box">
-                          <h1>
-                            Fast Food Restaurant
-                          </h1>
-                          <p>
-                            Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
-                          </p>
-                          <div class="btn-box">
-                            <a href="" class="btn1">
-                              Order Now
-                            </a>
-                          </div>
+            </nav>
+        </div>
+    </header>
+
+        <section class="slider">
+          <div id="demo" class="carousel slide" data-bs-ride="carousel" >
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="container ">
+                  <div class="row">
+                    <div class="col-md-7 col-lg-6 " style="margin-left: 0;">
+                      <div class="detail-box">
+                        <h1>
+                          Fast Food Restaurant
+                        </h1>
+                        <p>
+                          Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
+                        </p>
+                        <div class="btn-box">
+                          <a href="order.html" class="btn1">
+                            Order Now
+                          </a>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="container">
-                <ol class="carousel-indicators">
-                  <li data-target="#customCarousel1" data-slide-to="0" ></li>
-                  <li data-target="#customCarousel1" data-slide-to="1" class="active"></li>
-                  <li data-target="#customCarousel1" data-slide-to="2"></li>
-                </ol>
+              <div class="carousel-item">
+                <div class="container ">
+                  <div class="row">
+                    <div class="col-md-7 col-lg-6 " style="margin-left: 0;">
+                      <div class="detail-box">
+                        <h1>
+                          Fast Food Restaurant
+                        </h1>
+                        <p>
+                          Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
+                        </p>
+                        <div class="btn-box">
+                          <a href="order.html" class="btn1">
+                            Order Now
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+              <div class="carousel-item">
+                <div class="container ">
+                  <div class="row">
+                    <div class="col-md-7 col-lg-6 " style="margin-left: 0;">
+                      <div class="detail-box">
+                        <h1>
+                          Fast Food Restaurant
+                        </h1>
+                        <p>
+                          Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
+                        </p>
+                        <div class="btn-box">
+                          <a href="order.html" class="btn1">
+                            Order Now
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="container">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
               </div>
             </div>
-      
-          </section>
+          </div>
+        </section>
     </div>
 </body>
 

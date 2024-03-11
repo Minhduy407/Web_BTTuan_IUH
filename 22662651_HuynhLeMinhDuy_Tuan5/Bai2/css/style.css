@@ -1,6 +1,23 @@
-body {
-    background-image: url(../images/hero-bg.jpg);
-    background-size: cover;
+body{
+  font-family: "Open Sans", sans-serif;
+  color: white;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none !important;
+}
+
+.img-box{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about_section{
+  background-color: #232730;
+  padding: 90px 0;
 }
 
 .order_online {
@@ -12,65 +29,204 @@ body {
     margin: 0 10px;
 }
 
-#navbarSupportedContent li {
-    margin: 0 10px;
+.navbar-brand{
+  font-family: 'Dancing Script', cursive;
 }
 
-#navbarSupportedContent a,
-#navbarSupportedContent i,
-.navbar-brand span {
-    color: white;
-    font-size: 1.3rem;
+.navbar-brand span{
+  color: white;
+  font-weight: bold;
+  font-size: 32px;
 }
 
-.btn1{
-    text-decoration: none;
+.custom_nav-container .navbar-nav .nav-item .nav-link {
+  padding: 5px 20px;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
-.slider_section {
-    display: flex;
-    position: relative;
-    padding: 100px 0 75px 0;
-  }
+.options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.options .cart_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.options .cart_link svg {
+  margin-left: 10px;
+  width: 17px;
+  height: auto;
+  fill: #ffffff;
+  margin-bottom: 2px;
+}
+
+.options .order_online {
+  display: inline-block;
+  padding: 8px 30px;
+  background-color: #ffbe33;
+  color: #ffffff;
+  border-radius: 45px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: none;
+}
+
+.custom_nav-container .navbar-nav {
+  padding-left: 18%;
+}
+
+.custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-container .navbar-nav .nav-item.active .nav-link {
+  color: #ffbe33;
+}
+
+.navbar-brand{
+  margin-left: 10px;
+}
+
+header .nav-link:hover {
+  color: #ffbe33;
+}
+
+header .nav-link::selection {
+  color: #ffbe33;
+}
+
+.slider {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  padding: 45px 0 75px 0;
+}
+
+.slider .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slider #demo{
+width: 100%;
+position: unset;
+}
+
+
+.slider .detail-box{
+color: #ffffff;
+margin: 115px auto;
+}
+
+.slider .detail-box h1 {
+font-family: 'Dancing Script', cursive;
+font-size: 4rem;
+font-weight: bold;
+margin-bottom: 15px;
+}
+
+.slider .detail-box p {
+font-size: 14px;
+}
+
+.slider .detail-box a {
+display: inline-block;
+padding: 10px 45px;
+background-color: #ffbe33;
+color: #ffffff;
+border-radius: 45px;
+-webkit-transition: all 0.3s;
+transition: all 0.3s;
+border: none;
+margin-top: 10px;
+}
+
+.slider .carousel-indicators {
+position: unset;
+margin: 0;
+
+}
+
+
+.slider .carousel-indicators {
+position: unset;
+margin: 0;
+-webkit-box-pack: start;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+-webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+}
+
+.slider .carousel-indicators button {
+background-color: #ffffff;
+width: 12px;
+height: 12px;
+border-radius: 100%;
+opacity: 1;
+}
+
+.slider .carousel-indicators button.active {
+width: 20px;
+height: 20px;
+background-color: #ffbe33;
+}
   
-.slider_section #customCarousel1{
-    width: 100%;
-}
-
-.carousel-indicators li{
-    margin: 0 2px;
-    list-style: none;
-}
-
-  .slider_section .detail-box {
+  .about_section {
+    padding-top: 80px;
+    padding-bottom: 15px;
+    background: #222831;
     color: #ffffff;
-    margin-bottom: 145px;
   }
   
-  .slider_section .detail-box h1 {
-    font-size: 3.5rem;
+  .about_section .row{
+    align-items: center;
+  }
+  
+  .about_section .img-box img {
+    width: 100%;
+    max-width: 445px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .about_section h2{
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 15px;
   }
   
-  .slider_section .detail-box p {
-    font-size: 14px;
-  }
-  
-  .slider_section .detail-box a {
+  .about_section .detail-box a{
     display: inline-block;
     padding: 10px 45px;
     background-color: #ffbe33;
     color: #ffffff;
     border-radius: 45px;
+    transition: all 0.3s;
     border: none;
-    margin-top: 10px;
+    margin-top: 15px;
   }
-  
-  .slider_section .detail-box a:hover {
-    background-color: #e69c00;
-  }
-  
+
   .slider_section .carousel-indicators {
     position: unset;
     margin: 0;
@@ -91,4 +247,145 @@ body {
     width: 20px;
     height: 20px;
     background-color: #ffbe33;
+  }
+
+  .booktable_section{
+    height: 100%;
+    padding-top: 100px;
+    padding-bottom: 115px;
+    background-color: white
+  }
+  
+  .booktable_section .form_container .form-control {
+    width: 100%;
+    border: none;
+    height: 50px;
+    margin-bottom: 25px;
+    padding-left: 25px;
+    border: 1px solid #999;
+    outline: none;
+    color: #000000;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .booktable_section .btn_box button{
+    margin-top: 15px;
+    border: none;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px 55px;
+    background-color: #ffbe33;
+    color: #ffffff;
+    border-radius: 45px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border: none;
+  }
+  
+  .booktable_section .map_container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .section-list-food .heading_center{
+    font-family: Dancing Script, cursive, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+  }
+
+  .section-list-food .filters_menu {
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    list-style-type: none;
+    margin: 45px 0 20px 0;
+  }
+  
+  .section-list-food .filters_menu li {
+    padding: 7px 25px;
+    cursor: pointer;
+    border-radius: 25px;
+    margin: 0;
+  }
+  
+  .section-list-food .filters_menu li.active {
+    background-color: #222831;
+    color: #ffffff;
+  }
+  
+  .section-list-food .box {
+    position: relative;
+    margin-top: 25px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #f1f2f3 25px, #222831 25px);
+  }
+  
+  .section-list-food .box .img-box {
+    background: #f1f2f3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 215px;
+    border-radius: 0 0 0 45px;
+    margin: -1px;
+    padding: 25px;
+  }
+  
+  .section-list-food .box .img-box img {
+    max-width: 100%;
+    max-height: 145px;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+  }
+  
+  .section-list-food .box .options a svg {
+    width: 16px;
+    height: auto;
+    fill: #ffffff;
+  }
+  .section-list-food .options{
+    justify-content: space-between;
+  }
+  
+  .section-list-food  a {
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    background-color: #ffbe33;
+    color: #ffffff;
+    border-radius: 50%;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border: none;
+  }
+  
+  .section-list-food .detail-box{
+    padding: 10px 20px;
+  }
+  
+  .section-list-food .options span {
+    margin-left: 0;
   }
