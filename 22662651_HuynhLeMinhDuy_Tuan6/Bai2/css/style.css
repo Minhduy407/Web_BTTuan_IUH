@@ -1,0 +1,50 @@
+.container-center{
+    width: 500px;
+    border: 1px solid black;
+}
+
+.container-title{
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    color: rgb(229, 175, 184);
+    background-color: #cfcccc;
+}
+
+.col1{
+    width: 6rem;
+    font-size: 15px;
+    border-right: 1px solid black;
+}
+
+.container-center .row
+{
+    border: 1px solid black;
+}
+
+.form-control{
+    padding: 3px;
+    border-radius: 0px;
+    border: 1px solid black;
+}
+
+.container-center .row div{
+    padding-left: 0;
+    font-weight: 500;
+}
+
+.container-center .row:nth-child(2),
+.container-center .row:nth-child(3),
+.container-center .row:nth-child(4)
+{   
+    background-color: #e8e5e5;
+    padding-left: 0;
+}
+
+.btn{
+    padding: 2px 5px;
+    border-radius: 0px;
+    border: 2px solid black;
+    
+}
