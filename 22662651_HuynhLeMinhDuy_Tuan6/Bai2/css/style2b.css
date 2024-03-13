@@ -1,0 +1,20 @@
+thead td{
+    font-weight: 450;
+    text-align: center;
+
+}
+
+tbody tr td:nth-child(3) span{
+    color: red;
+    font-size: 20px;
+    font-style: italic;
+}
+
+tbody tr:nth-child(4) td:nth-child(1){
+   display: flex;
+   flex-direction: row-reverse;
+}
+
+button{
+    border: 1px solid black;
+}

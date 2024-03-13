@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4 border border-black p-3">
+                <table>
+                    <thead>
+                        <tr> 
+                            <td colspan="3" ><span style="display: flex;justify-content: center;font-weight: 400;">FORM ĐỊNH DẠNG</span></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row"><span>Họ và tên</span></td>
+                            <td><input type="text" name="so1" id="so1"></td>
+                        </tr>
+                        <tr>
+                            <td scope="row"><span style="float: right;">Chọn</span></td>
+                            <td>
+                                <input type="radio" name="background" id="background">Background
+                                <input type="radio" name="font" id="font">Font
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row"><span>Chọn màu</span></td>
+                            <td>
+                                <select name="mau" id="mau">
+                                    <option value="1">Chon mau ...</option>
+                                    <option value="2">Red</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row"></td>
+                            <td>
+                                <button type="submit" style="border: 1px solid black;">Đổi màu</button>
+                                <button type="reset" style="border: 1px solid black;">Cancel</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+</body>
+</html>
