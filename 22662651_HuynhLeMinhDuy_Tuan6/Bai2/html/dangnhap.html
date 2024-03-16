@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="22662651 - Huỳnh Lê Minh Duy - Tuần 06" content="JS">
+    <title>Đăng Nhập</title>
     <link rel="stylesheet" href="../CSS/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -22,7 +23,7 @@
                         <span>UserName</span>
                     </div>
                     <div class="col-md-6">
-                        <label for="username">YourName</label>
+                        <label for="username" id="user">YourName</label>
                     </div>
                 </div>
                 <div class="row">
@@ -30,12 +31,18 @@
                         <span>PassWord</span>
                     </div>
                     <div class="col-md-6">
-                        <label for="password">YourPWD</label>
+                        <label for="password" id="password">YourPWD</label>
                     </div>
                 </div>
             </div>
             <div class="col-md-3"></div>
         </div>
     </div>
+    <script>
+        let user = localStorage.getItem("username");
+        let password = localStorage.getItem("password");
+        document.getElementById("user").innerHTML = user;
+        document.getElementById("password").innerHTML = password;
+    </script>
 </body>
 </html>

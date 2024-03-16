@@ -45,11 +45,6 @@ section{
 .table td{
     padding: 1px;
     border: 1px solid black;
-}
-
-.table td span{
-    border: 1px solid black;
-    display: flex;
     text-align: center;
     justify-content: center;
 }

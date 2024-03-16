@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="22662651 - Huỳnh Lê Minh Duy - Tuần 06" content="JS">
+    <title>Bai2b</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style2b.css">
 </head>
@@ -21,25 +22,25 @@
                     <tbody>
                         <tr>
                             <td scope="row"><span>Nhập số thứ 1</span></td>
-                            <td><input type="text" name="so1" id="so1"></td>
-                            <td><span>(*)</span></td>
+                            <td><input type="text" name="so1" id="so1" onblur="baoloiso1()"></td>
+                            <td><span id="err1" >(*)</span></td>
                         </tr>
                         <tr>
                             <td scope="row"><span>Nhập số thứ 2</span></td>
-                            <td><input type="text" name="so2" id="so2"></td>
-                            <td><span>(*)</span></td>
+                            <td><input type="text" name="so2" id="so2" onblur="baoloiso2()"></td>
+                            <td><span id="err2">(*)</span></td>
                         </tr>
                         <tr>
                             <td colspan="3">
-                                <button>Cong</button>
-                                <button>Tru</button>
-                                <button>Chia</button>
-                                <button>Chia dư</button>
+                                <button type="button" id="cong" onclick="cong()">Cong</button>
+                                <button type="button" id="tru" onclick="tru()">Tru</button>
+                                <button type="button" id="chia" onclick="chia()">Chia</button>
+                                <button type="button" id="chiadu" onclick="chiadu()">Chia dư</button>
                             </td>
                         </tr>
                         <tr>
                             <td scope="row"><span>Kết quả</span></td>
-                            <td><input type="text" name="ketqua" id="ketqua"></td>
+                            <td><input type="text" name="ketqua" id="ketqua" readonly></td>
                         </tr>
                     </tbody>
                 </table>
@@ -47,5 +48,59 @@
             <div class="col-4"></div>
         </div>
     </div>
+    <script>
+        function baoloiso1(){
+            let so1 = document.getElementById('so1').value;
+
+            let pat  = /^[0-9]+$/;
+            if(!pat.test(so1)){
+                document.getElementById('err1').innerHTML = 'So 1 phai la so';
+                return false;
+            }
+            else{
+                document.getElementById('err1').innerHTML = '(*)';
+                return true;
+            }
+        }
+        function baoloiso2(){
+            let so2 = document.getElementById('so2').value;
+
+            let pat  = /^[0-9]+$/;
+            if(!pat.test(so2)){
+                document.getElementById('err2').innerHTML = 'So 2 phai la so';
+                return false;
+            }
+            else{
+                document.getElementById('err2').innerHTML = '(*)';
+                return true;
+            }
+        }
+        function cong() {
+            let so1 = document.getElementById('so1').value;
+            let so2 = document.getElementById('so2').value;
+            let ketqua = parseInt(so1) + parseInt(so2);
+            document.getElementById('ketqua').value = ketqua;
+        }
+        function tru() {
+            let so1 = document.getElementById('so1').value;
+            let so2 = document.getElementById('so2').value;
+            let ketqua = parseInt(so1) - parseInt(so2);
+            document.getElementById('ketqua').value = ketqua;
+        }
+        function chia() {
+            let so1 = document.getElementById('so1').value;
+            let so2 = document.getElementById('so2').value;
+            let ketqua = parseInt(so1) / parseInt(so2);
+            document.getElementById('ketqua').value = ketqua;
+        }
+        function chiadu() {
+            let so1 = document.getElementById('so1').value;
+            let so2 = document.getElementById('so2').value;
+            let ketqua = parseInt(so1) % parseInt(so2);
+            document.getElementById('ketqua').value = ketqua;
+        }
+        
+
+    </script>
 </body>
 </html>

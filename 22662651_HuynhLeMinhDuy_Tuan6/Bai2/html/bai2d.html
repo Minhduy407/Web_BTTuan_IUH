@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="22662651 - Huỳnh Lê Minh Duy - Tuần 06" content="JS">
     <title>Document</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
@@ -10,7 +11,7 @@
     <div class="container">
         <div class="row">
             <div class="col-4"></div>
-            <div class="col-4 border border-black p-3">
+            <div class="col-4 border border-black p-3" style="display: flex;flex-direction: column;justify-content: center;">
                 <table>
                     <thead>
                         <tr> 
@@ -19,37 +20,70 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td scope="row"><span>Họ và tên</span></td>
+                            <td scope="row" style="float: right;"><span>Họ và tên</span></td>
                             <td><input type="text" name="so1" id="so1"></td>
                         </tr>
                         <tr>
                             <td scope="row"><span style="float: right;">Chọn</span></td>
                             <td>
-                                <input type="radio" name="background" id="background">Background
-                                <input type="radio" name="font" id="font">Font
+                                <input type="radio" name="option" id="background">Background
+                                <input type="radio" name="option" id="font">Font
                             </td>
                         </tr>
                         <tr>
-                            <td scope="row"><span>Chọn màu</span></td>
+                            <td scope="row" style="float: right;"><span>Chọn màu</span></td>
                             <td>
                                 <select name="mau" id="mau">
-                                    <option value="1">Chon mau ...</option>
-                                    <option value="2">Red</option>
+                                    <option value="1" id="1">Chon mau ...</option>
+                                    <option value="#ff0000" id="red">Red</option>
+                                    <option value="#ffee00" id="yellow">Yellow</option>
                                 </select>
                             </td>
                         </tr>
                         <tr>
                             <td scope="row"></td>
                             <td>
-                                <button type="submit" style="border: 1px solid black;">Đổi màu</button>
-                                <button type="reset" style="border: 1px solid black;">Cancel</button>
+                                <input type="button" style="border: 1px solid black;" onclick="doimau()" value="Đổi màu"></input>
+                                <input type="button" style="border: 1px solid black;" onclick="cancel()" value="Cancel"></input>
                             </td>
                         </tr>
                     </tbody>
                 </table>
+                <div class="text" style="text-align: justify;">
+                    <p id="text">you can direct link the hyperlink with the file if you know the address but this is limited by the browser. 
+                        eg. if pdf reader is installed on the client then the pdf will not be downloaded instead it will be shown. 
+                        A good solution would be to have a seperate page for downloading files. just pass filename in querystring 
+                        and in the pageload event just outpit the file in response stream. This way you can use url say dwnld.aspx? 
+                        filename.ext
+                    </p>
+                </div>
             </div>
-            <div class="col-4"></div>
+            
+            <div class="col-4">
+            </div>
         </div>
     </div>
+    <script>
+        function doimau(){
+            let mau = document.getElementById("mau");
+            let mamau = mau.options[mau.selectedIndex].value;
+
+            let font = document.getElementById("font");
+            let bg = document.getElementById("background");
+
+            if(font.checked){
+                document.getElementById("text").style.color=mamau;
+            }
+            if(bg.checked){
+                document.getElementById("text").style.backgroundColor=mamau;
+            }
+        }
+
+        function cancel(){
+
+            document.getElementById("text").style.color="black";
+            document.getElementById("text").style.backgroundColor="white";
+        }
+    </script>
 </body>
 </html>

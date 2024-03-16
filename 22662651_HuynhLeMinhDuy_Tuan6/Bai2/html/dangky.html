@@ -3,9 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="22662651 - Huỳnh Lê Minh Duy - Tuần 06" content="JS">
+    <title>Đăng ký</title>
     <link rel="stylesheet" href="../CSS/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
+    <script>
+        function nhap(){
+            let user,password;
+            user = document.getElementById("username").value;
+            password = document.getElementById("password").value;
+
+            localStorage.setItem("username",user);
+            localStorage.setItem("password",password);
+
+            let w = window.open("dangnhap.html");
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -22,7 +35,7 @@
                         <span>Họ tên</span>
                     </div>
                     <div class="col-md-6">
-                        <input for="username" class="form-control"></input>
+                        <input type="text" for="username" id="username" class="form-control"></input>
                     </div>
                 </div>
                 <div class="row">
@@ -30,13 +43,13 @@
                         <span>Mật khẩu</span>
                     </div>
                     <div class="col-md-6">
-                        <input for="password" class="form-control"></input>
+                        <input type="password" for="password" id="password" class="form-control"></input>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 col1"></div>
                     <div class="col-md-6">
-                        <button class="btn">Nhập</button>
+                        <button class="btn" onclick="nhap()">Nhập</button>
                     </div>
                 </div>
             </div>
