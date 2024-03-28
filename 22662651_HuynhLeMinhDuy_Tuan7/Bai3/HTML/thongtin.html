@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="22662651 - Huỳnh Lê Minh Duy - Tuần 07" content="Javascript – jQuery cơ bản">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Đăng Ký</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Thông Tin Đăng Ký</h2>
+        <div id="userInfo">
+            
+        </div>
+    </div>
+
+    <script>
+        // Lấy dữ liệu từ localStorage
+        var fullname = localStorage.getItem("fullname");
+        var username = localStorage.getItem("username");
+        var password = localStorage.getItem("password");
+        var phone = localStorage.getItem("phone");
+        var address = localStorage.getItem("address");
+        var email = localStorage.getItem("email");
+        var ngaysinh = localStorage.getItem("ngaysinh");
+        var thangsinh = localStorage.getItem("thangsinh");
+        var namsinh = localStorage.getItem("namsinh");
+        var hobbies = localStorage.getItem("sothich");
+
+
+
+        var userInfoDiv = document.getElementById("userInfo");
+        userInfoDiv.innerHTML = "<p><strong>Họ và Tên:</strong> " + (fullname ? fullname : "Chưa cập nhật") + "</p>" +
+                                "<p><strong>Tên Đăng Nhập:</strong> " + (username ? username : "Chưa cập nhật") + "</p>" +
+                                "<p><strong>Mật Khẩu:</strong> **********</p>" +
+                                "<p><strong>Ngày Sinh:</strong> " + ngaysinh + "/" + thangsinh + "/" + namsinh + "</p>" +
+                                "<p><strong>Điện Thoại:</strong> " + (phone ? phone : "Chưa cập nhật") + "</p>" +
+                                "<p><strong>Địa Chỉ:</strong> " + (address ? address : "Chưa cập nhật") + "</p>" +
+                                "<p><strong>Email:</strong> " + (email ? email : "Chưa cập nhật") + "</p>" +
+                                "<p><strong>Sở Thích:</strong> " + (hobbies ? hobbies : "Chưa cập nhật") + "</p>";
+
+    </script>
+</body>
+</html>
