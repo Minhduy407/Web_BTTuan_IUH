@@ -1,0 +1,22 @@
+.container{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.div_table_student{
+    margin-top: 20px;
+}
+.table_student{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.table_student tr th{
+    text-align: center;
+    border: 2px solid black;
+}
+
+#list tr td{
+    text-align: center;
+    border: 2px solid black;
+}

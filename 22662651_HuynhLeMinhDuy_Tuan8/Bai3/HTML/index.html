@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="22662651 - Huỳnh Lê Minh Duy - Tuần 08" content="Javascript – jQuery – Form – Modal- Styles">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../JS/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#btnsubmit').attr('disabled', true);
+            
+            $('#full_name').blur(function(){
+                var full_name = $('#full_name').val();
+                var string = /^[A-Z][a-z]*(\s[A-Z][a-z]*)*$/;
+                if(full_name.trim() === ""){
+                    $('#err').text('Họ tên không được để trống');
+                    $('#btnsubmit').attr('disabled', true);
+                }else if(!string.test(full_name)){
+                    $('#err').text('Họ tên không hợp lệ');
+                    $('#btnsubmit').attr('disabled', true);
+                }else{
+                    $('#err').text('');
+                    $('#btnsubmit').attr('disabled', false);
+                }
+            });
+
+            
+
+
+            $("#signin").submit(function(e){
+                e.preventDefault();
+                var full_name = $("#full_name").val();
+                var class_name = $("#class").val();
+                var subject = $("#subject").val();
+                var type = $("input[name='LT-TH']:checked").val();
+                
+                var row = "<tr><td>"+full_name+"</td><td>"+class_name+"</td><td>"+subject+"</td><td>"+type+"</td></tr>";
+                $("#list").append(row);
+                // Clear input fields after submission
+                $("#full_name").val("");
+                $("input[name='LT-TH']").prop("checked", false);
+                
+                $('#btnsubmit').attr('disabled', true);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <section>
+            <form id="signin" action="">
+                <table>
+                    <tr>
+                        <td>Họ tên:</td>
+                        <td><input type="text" id="full_name"><span id="err" class="text-danger"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Lớp:</td>
+                        <td>
+                            <select id="class">
+                                <option value="DHKTPM9A">Đại học Kỹ thuật phần mềm 9A</option>
+                                <option value="DHKTPM9B">Đại học Kỹ thuật phần mềm 9B</option>
+                                <option value="DHKTPM9C">Đại học Kỹ thuật phần mềm 9C</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Môn học:</td>
+                        <td>
+                            <select id="subject">
+                                <option value="Lập trình hướng đối tượng">Lập trình hướng đối tượng</option>
+                                <option value="Cơ sở dữ liệu">Cơ sở dữ liệu</option>
+                                <option value="Lập trình web">Lập trình web</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Loại:</td>
+                        <td>
+                            <input type="radio" name="LT-TH" id="LT" value="Lý thuyết" checked><label for="LT">Lý thuyết</label>
+                            <input type="radio" name="LT-TH" id="TH" value="Thực hành"><label for="TH">Thực hành</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button type="submit" id="btnsubmit">Đăng ký</button></td>
+                    </tr>
+                </table>
+            </form>
+            <div class="div_table_student">
+                <table class="table_student">
+                    <thead>
+                        <tr>
+                            <th>Họ tên:</th>
+                            <th>Lớp:</th>
+                            <th>Môn học:</th>
+                            <th>Loại:</th>
+                        </tr>
+                    </thead>
+                    <tbody id="list">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+    
+</body>
+</html>

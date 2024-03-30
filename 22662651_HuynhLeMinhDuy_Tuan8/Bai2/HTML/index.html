@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="22662651 - Huỳnh Lê Minh Duy - Tuần 08" content="Javascript – jQuery – Form – Modal- Styles">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../JS/jquery-3.4.1.min.js"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <form id="tinhtien" action="tinhtien">
+            <table>
+                <tr class="col_name">
+                    <td>STT</td>
+                    <td>Hình ảnh</td>
+                    <td>Ảnh</td>
+                    <td>Số lượng</td>
+                </tr>
+                <tr class="table_row">
+                    <td>1</td>
+                    <td><img src="../IMG/cafe1.jpg" alt=""></td>
+                    <td><span id="price1">20000</span></td>
+                    <td><input type="number" id="input_price1" min="0" value="0"></td>
+                </tr>
+                <tr class="table_row">
+                    <td>2</td>
+                    <td><img src="../IMG/cafe2.jpg" alt=""></td>
+                    <td><span id="price2">40000</span></td>
+                    <td><input type="number" id="input_price2" min="0" value="0"></td>
+                </tr>
+                <tr class="table_row">
+                    <td>3</td>
+                    <td><img src="../IMG/cafe3.jpg" alt=""></td>
+                    <td><span id="price3">30000</span></td>
+                    <td><input type="number" id="input_price3" min="0" value="0"></td>
+                </tr>
+                <tr class="table_row">
+                    <td>4</td>
+                    <td><img src="../IMG/cafe4.jpg" alt=""></td>
+                    <td><span id="price4">50000</span></td>
+                    <td><input type="number" id="input_price4" min="0" value="0"></td>
+                </tr>
+                <tr class="table_row">
+                    <td>5</td>
+                    <td><img src="../IMG/cafe5.jpg" alt=""></td>
+                    <td><span id="price5">30000</span></td>
+                    <td><input type="number" id="input_price5" min="0" value="0"></td>
+                </tr>
+                <tr class="row_sum">
+                    <td></td>
+                    <td></td>
+                    <td>Tổng thành tiền</td>
+                    <td><span id="thanhtien"></span></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('#tinhtien').change(function(){
+                var price1 = $('#price1').text();
+                var price2 = $('#price2').text();
+                var price3 = $('#price3').text();
+                var price4 = $('#price4').text();
+                var price5 = $('#price5').text();
+                var input_price1 = $('#input_price1').val();
+                var input_price2 = $('#input_price2').val();
+                var input_price3 = $('#input_price3').val();
+                var input_price4 = $('#input_price4').val();
+                var input_price5 = $('#input_price5').val();
+                var thanhtien = price1*input_price1 + price2*input_price2 + price3*input_price3 + price4*input_price4 + price5*input_price5;
+                $('#thanhtien').text(thanhtien);
+            });
+        
+        })
+    </script>
+</body>
+</html>
