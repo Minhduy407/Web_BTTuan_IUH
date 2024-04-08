@@ -2,83 +2,207 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="22662651 - Huỳnh Lê Minh Duy - Tuần 07" content="Javascript – jQuery cơ bản">
+    <meta name="22662651 - Huỳnh Lê Minh Duy - Tuần 08" content="Javascript – jQuery – Form – Modal- Styles">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../CSS/bootstrap.min.css">
     <script src="../JS/jquery-3.4.1.min.js"></script>
-</head>
-<body>
-    <div class="container p-0">
-        <header><div class="h4">Animal Gallery</div></header>
-        <section style="height: 100vh;">
-            <div class="container p-0" style="height: 100%;">
-                <div class="row" style="height: 60%;">
-                    <div class="col-sm-4">
-                        <div class="card">
-                            <div class="card-img">
-                                <img id="lion" class="card-img-top p-3" alt="..." >
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title" style="text-align: center;">Lion</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card">
-                            <img id="cat" class="card-img-top p-3" alt="..." style="height: 325px;">
-                            <div class="card-body">
-                                <h5 class="card-title" style="text-align: center;">Cat</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card">
-                            <img id="bird" class="card-img-top p-3" alt="..." style="height: 325px;">
-                            <div class="card-body">
-                                <h5 class="card-title" style="text-align: center;">Bird</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" style="height: 50%;">
-                    <div class="col-sm-4">
-                        <div class="card">
-                            <img id="rhino" class="card-img-top p-3" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title" style="text-align: center;">Rhino</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card">
-                            <img id="Panda" class="card-img-top p-3" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title" style="text-align: center;">Panda</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card">
-                            <img id="goat" class="card-img-top p-3" alt="..." style="height: 295px;">
-                            <div class="card-body">
-                                <h5 class="card-title" style="text-align: center;">Goat</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
     <script>
         $(document).ready(function(){
-            $("#lion").attr("src", "../IMG/lion.jpg");
-            $("#cat").attr("src", "../IMG/cat.jpg");
-            $("#bird").attr("src", "../IMG/bird.jpg");
-            $("#rhino").attr("src", "../IMG/rhino.jpg");
-            $("#Panda").attr("src", "../IMG/Panda.jpg");
-            $("#goat").attr("src", "../IMG/sheep.jpg");
+            $("#register_form").submit(function(){
+                var txtDN = $("#txtDN").val();
+                var txtMK = $("#txtMK").val();
+                var txtXNMK = $("#txtXNMK").val();
+                var txtName = $("#txtName").val();
+                var txtDate = $("#txtDate").val();
+                var txtDC = $("#txtDC").val();
+                var txtDT = $("#txtDT").val();
+                var txtEmail = $("#txtEmail").val();
+                
+                if(txtDN == ""){
+                    $("#errDN").text("Tên đăng nhập không được để trống");
+                    return false;
+                }else{
+                    $("#errDN").text("*");
+                }
+                let reg = /^[a-zA-Z][a-zA-Z0-9@$!%*?&]*$/;
+                if(!reg.test(txtDN)){
+                    $("#errDN").text("Tên đăng nhập bắt đầu là ký tự, có hoặc không có ký tự số, ký tự đặc biệt và không được có khoảng trắng");
+                    return false;
+                }else{
+                    $("#errDN").text("*");
+                }
+                if(txtMK == ""){
+                    $("#errMK").text("Mật khẩu không được để trống");
+                    return false;
+                }else{
+                    $("#errMK").text("");
+                }
+                if(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}/.test(txtMK) == false){
+                    $("#errMK").text("Mật khẩu phải chứa ít nhất 1 ký tự số, 1 ký tự thường, 1 ký tự hoa, 1 ký tự đặc biệt và có ít nhất 8 ký tự");
+                    return false;
+                }else{
+                    $("#errMK").text("*");
+                }
+                if(txtXNMK == ""){
+                    $("#errXNMK").text("Nhập lại mật khẩu không được để trống");
+                    return false;
+                }else{
+                    $("#errXNMK").text("*");
+                }
+                if(txtMK != txtXNMK){
+                    $("#errXNMK").text("Mật khẩu không trùng khớp");
+                    return false;
+                }else{
+                    $("#errXNMK").text("*");
+                }
+                if(txtName == ""){
+                    $("#errName").text("Họ và tên không được để trống");
+                    return false;
+                }else{
+                    $("#errName").text("");
+                }
+                if(/[A-Z][a-zA-Z\s]+/.test(txtName) == false){
+                    $("#errName").text("Họ và tên phải bắt đầu bằng ký tự hoa và không chứa ký tự số");
+                    return false;
+                }else{
+                    $("#errName").text("*");
+                }
+                // Lấy giá trị ngày từ trường input
+                var inputDate = $('#txtDate').val();
+
+                // Lấy ngày hiện tại
+                var currentDate = new Date();
+                var currentYear = currentDate.getFullYear();
+                var inputYear = new Date(inputDate).getFullYear();
+
+                var age = currentYear - inputYear;
+                if(age <= 16){
+                    $("#errDate").text("Tuổi phải lớn hơn 16");
+                    return false;
+                }
+                if(txtDate == ""){
+                    $("#errDate").text("Ngày sinh không được để trống");
+                    return false;
+                }else{
+                    $("#errDate").text("");
+                }
+
+                if(txtDC == ""){
+                    $("#errDC").text("Địa chỉ không được để trống");
+                    return false;
+                }else{
+                    $("#errDC").text("");
+                }
+                if(txtDT == ""){
+                    $("#errDT").text("Điện thoại không được để trống");
+                    return false;
+                }else{
+                    $("#errDT").text("");
+                }
+                if(/(09|03|07|06|05|04)[0-9]{8}/.test(txtDT) == false){
+                    $("#errDT").text("Phải là số điện thoại của Việt Nam và bắt đầu bằng 09, 03, 07, 06, 05, 04");
+                    return false;
+                }else{
+                    $("#errDT").text("");
+                }
+                if(txtEmail == ""){
+                    $("#errEmail").text("Email không được để trống");
+                    return false;
+                }else{
+                    $("#errEmail").text("");
+                }
+                if(/^[a-zA-Z0-9._-]+@gmail.com$/.test(txtEmail) == false){
+                    $("#errEmail").text("Email không đúng định dạng");
+                    return false;
+                }else{
+                    $("#errEmail").text("");
+                }
+
+            });
+            
         });
     </script>
+</head>
+<body>
+    <div class="container" style="width: 600px;">
+        <form id="register_form" action="">
+            <section class="Signin">
+                <table >
+                    <tr><td colspan="3">
+                        <h1 class="d-flex justify-content-center" style="font-size: 25px;">ĐĂNG KÝ TÀI KHOẢN</h1>
+                    </td></tr>
+                    <tr>
+                        <td><label for="address" class="form-label">Tên đăng nhập: </label></td>
+                        <td><input type="text" id="txtDN" class="form-control" placeholder="txtDN"></td>
+                        <td><span class="text-danger" id="errDN">*</span></td>
+                    </tr>
+                    <tr>
+                        <td>Mật khẩu: </td>
+                        <td>
+                            <input class="form-control" type="password" id="txtMK" placeholder="txtMK">
+                        </td>
+                        <td><span class="text-danger" id="errMK">*</span></td>
+                    </tr>
+                    <tr>
+                        <td>Nhập lại mật khẩu: </td>
+                        <td><input type="password" class="form-control" id="txtXNMK" placeholder="txtXNMK"></td>
+                        <td><span class="text-danger" id="errXNMK">*</span></td>
+                    </tr>
+                    <tr><td colspan="3"><h4 class="d-flex justify-content-center">THÔNG TIN CÁ NHÂN</h4></td></tr>
+                    <tr>
+                        <td>Họ và tên: </td>
+                        <td><input type="text" class="form-control" name="" id="txtName" placeholder="txtName"></td>
+                        <td><span class="text-danger" id="errName">*</span></td>
+                    </tr>
+                    <tr>
+                        <td>Ngày sinh: </td>
+                        <td><input type="date" name="" class="form-control" id="txtDate">
+                           
+                        </td>
+                        <td> <span class="text-danger" id="errDate"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Giới tính: </td>
+                        <td>
+                            <input type="radio" class="form-check-inline" name="gender" value="Nam" checked>Nam
+                            <input type="radio" class="form-check-inline" name="gender" value="Nữ">Nữ
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Địa chỉ: </td>
+                        <td>
+                            <input type="text" name="" class="form-control" id="txtDC" placeholder="txtDC">
+                           
+                        </td>
+                        <td> <span class="text-danger" id="errDC"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Điện thoại: </td>
+                        <td>
+                            <input type="text" name="" class="form-control" id="txtDT" placeholder="txtDT">
+                            
+                        </td>
+                        <td><span class="text-danger" id="errDT"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Email: </td>
+                        <td>
+                            <input type="email" class="form-control" name="" id="txtEmail" placeholder="txtEmail">
+                            
+                        </td>
+                        <td><span class="text-danger" id="errEmail"></span></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button type="submit" class="form-btn" id="sign_in">Đăng ký</button>
+                            <button type="reset" class="form-btn" id="cancle">Hủy</button>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        </form>
+    </div>
 </body>
 </html>

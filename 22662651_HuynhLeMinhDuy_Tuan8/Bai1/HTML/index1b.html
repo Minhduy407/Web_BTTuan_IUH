@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="22662651 - Huỳnh Lê Minh Duy - Tuần 08" content="Javascript – jQuery – Form – Modal- Styles">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <script src="../JS/jquery-3.4.1.min.js"></script>
+    <title>Document</title>
+    <style>
+        .row>* {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-7" style="background-color: #3b5798;">
+                <div class="wrap-logo" style="flex-grow: 1;">
+                    <img src="../IMG/logo.png" style="width: 200px;" alt="">
+                </div>
+            </div>
+            <div class="col-5 d-flex align-items-center" style="background-color: #3b5798;color: white;">
+                <div class="col-4 text-start ">
+                    <label for="" class="form-label">Email hoặc điện thoại</label>
+                    <input type="text" class="form-input">
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Duy trì đăng nhập ?
+                        </label>
+                      </div>
+                </div>
+                <div class="col-4 text-start">
+                    <label for="" class="form-label">Mật khẩu</label>
+                    <input type="password" class="form-input">
+                    <label for="" class="form-label">Quên mật khẩu ?</label>
+                </div>
+                <div class="col-4 text-start">
+                    <button class="btn btn-sm btn-primary">Đăng nhập</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4" style="background-color: #e5e6fb;">
+                <img src="../IMG/Untitled.png" alt="">
+            </div>
+            <div class="col-8 d-flex justify-content-center align-items-center flex-column" style="background-color: #e5e6fb;">
+                <h3>Đăng ký</h3>
+
+                <h6><b>Miễn phí và sẽ luôn như vậy</b></h6>
+                <form id="dk" style="width: 500px;">
+                    <div class="mb-2 d-flex">
+                        <input type="text" id="TxTFirstName" placeholder="Họ" class="form-control w-50"> 
+                        <span class="text-danger" id="errho"></span>
+                        <input type="text" id="TxTLastName" placeholder="Tên" class="form-control w-5">
+                        <span class="text-danger" id="errten"></span>
+                    </div>
+                    <div class="mb-2 d-flex">
+                        <input type="text" id="TxTEmail" placeholder="Email đăng nhập" class="form-control w-100">
+                        <span class="text-danger" id="erremail1"></span>
+                    </div>
+                    <div class="mb-2 d-flex">
+                        <input type="text" id="TxTNLEmail" placeholder="Nhập lại email" class="form-control w-100">
+                        <span class="text-danger" id="erremail2"></span>
+                    </div>
+                    <div class="mb-2 d-flex">
+                        <input type="password" id="MK" placeholder="Mật khẩu" class="form-control w-100">
+                        <span class="text-danger" id="errmk"></span>
+                    </div>
+                    <div class="mb-2 d-flex">
+                        <input type="text" id="Year" placeholder="Năm sinh" class="form-control w-100">
+                        <span class="text-danger" id="errns"></span>
+                    </div>
+                    <div class="mb-2 d-flex">
+                        <button class="btn btn-sm btn-success">Đăng ký</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("#dk").submit(function(){
+                
+                var firstName = $("#TxTFirstName").val();
+                var lastName = $("#TxTLastName").val();
+                var email = $("#TxTEmail").val();
+                var nlemail = $("#TxTNLEmail").val();
+                var mk = $("#MK").val();
+                var year = $("#Year").val();
+                if(firstName == ""){
+                    $("#errho").html("Họ không được để trống");
+                    return false;
+                }
+                else if(!/^[A-Z][a-z]*$/.test(firstName)){
+                    $("#errho").html("Họ phải viết hoa chữ cái đầu tiên");
+                    return false;
+                }
+                else{
+                    $("#errho").html("");
+                }
+
+                if(lastName == ""){
+                    $("#errten").html("Tên không được để trống");
+                    return false;
+                }
+                else if(!/^[A-Z][a-z]+/.test(lastName)){
+                    $("#errten").html("Tên phải viết hoa chữ cái đầu tiên");
+                    return false;
+                }
+                else{
+                    $("#errten").html("");
+                }
+
+                if(email == ""){
+                    $("#erremail1").html("Email không được để trống");
+                    return false;
+                }
+                else if(!/^[a-zA-Z0-9]+@gmail.com/.test(email)){
+                    $("#erremail1").html("Email không đúng định dạng");
+                    return false;
+                }
+                else{
+                    $("#erremail1").html("");
+                }
+
+                if(nlemail == ""){
+                    $("#erremail2").html("Email không được để trống");
+                    return false;
+                }
+                else if(!/^[a-zA-Z0-9]+@gmail.com/.test(nlemail)){
+                    $("#erremail2").html("Email không đúng định dạng");
+                    return false;
+                }
+                else if(email != nlemail){
+                    $("#erremail2").html("Email không trùng khớp");
+                    return false;
+                }
+                else{
+                    $("#erremail2").html("");
+                }
+
+                if(mk == ""){
+                    $("#errmk").html("Mật khẩu không được để trống");
+                    return false;
+                }
+                else if(!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/.test(mk)){
+                    $("#errmk").html("Mật khẩu phải có ít nhất 6 ký tự bao gồm 1 chữ hoa, 1 chữ thường, 1 số và 1 ký tự đặc biệt");
+                    return false;
+                }
+                else{
+                    $("#errmk").html("");
+                }
+
+                if(year == ""){
+                    $("#errns").html("Năm sinh không được để trống");
+                    return false;
+                }
+                else if(!/^[0-9]{4}$/.test(year)){
+                    $("#errns").html("Năm sinh phải có 4 chữ số");
+                    return false;
+                }
+                else if(year > 2002){
+                    $("#errns").html("Năm sinh phải nhỏ hơn 2002");
+                    return false;
+                }
+                else{
+                    $("#errns").html("");
+                }
+                
+                alert("Đăng ký thành công");
+            });
+        });
+    </script>
+</body>
+</html>
