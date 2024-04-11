@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="22662651-HuynhLeMinhDuy-Tuan09" content="Javascript – jQuery – Regular Expressions">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <script src="../JS/bootstrap.min.js"></script>
+    <script src="../JS/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <div class="container p-0" style="border: 1px solid black;">
+        <header style="background-image: url(../IMG/website.png);height: 220px;">
+            
+        </header>
+        <nav style="border: 1px solid black;">
+            <ul class="d-flex gap-4 p-3 list-unstyled">
+                <li><a href="#" class="text-decoration-none">Trang chủ</a></li>
+                <li><a href="" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#authModal_DK">Đăng ký</a></li>
+            </ul>
+        </nav>
+        <section>
+            <div class="container p-0">
+                <h4 class="d-flex justify-content-center">LIST OF MEMBERS</h4>
+                <table style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Họ và tên</th>
+                            <th>Giới tính</th>
+                            <th>Số điện thoại</th>
+                            <th>Ngày sinh</th>
+                            <th>Địa chỉ</th>
+                            <th>Khóa học</th>
+                            <th>Học phí</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="width: 50px;">1</td>
+                            <td style="width: 100px;">Hoàng Lâm</td>
+                            <td style="width: 100px;">Nam</td>
+                            <td style="width: 100px;">090008888</td>
+                            <td style="width: 100px;">20/03/2010</td>
+                            <td style="width: 200px;">123 Nguyễn Du P5 Gò Vấp TPHCM</td>
+                            <td style="width: 80px;">6 tuần</td>
+                            <td style="width: 80px;">8.000.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+    <div class="modal fade" id="authModal_DK" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true" >
+        <div class="modal-dialog modal-dialog-centered" >
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <span>THÔNG TIN HỌC VIÊN</span>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <!-- Tab Content -->
+                    <div class="tab-content mt-3">
+                        <!-- Login Tab -->
+                        <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                           <form id="dk_form">
+                                <div class="row">
+                                    <div class="col-4"><label for="" class="form-label">Họ và tên</label></div>
+                                    <div class="col-8"><input type="text" id="hoten" class="form-control">
+                                    <span class="text-danger" id="errhoten">*</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4"><label for="" class="form-label">Giới tính</label></div>
+                                    <div class="col-8"><select name="" id="gt" class="form-select">
+                                        <option value="Nam">Nam</option>
+                                        <option value="Nữ">Nữ</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4"><label for="" class="form-label">Số điện thoại</label></div>
+                                    <div class="col-8"><input type="tel" id="sdt" class="form-control">
+                                    <span class="text-danger" id="errsdt">*</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4"><label for="" class="form-label">Ngày sinh</label></div>
+                                    <div class="col-8"><input type="date" id="ns" class="form-control">
+                                    <span class="text-danger" id="errdate">*</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4"><label for="" class="form-label">Địa chỉ</label></div>
+                                    <div class="col-8"><input type="text" id="diachi" class="form-control">
+                                        <span id="errdiachi"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4"><label for="" class="form-label">Bạn muốn tham gia khóa nào?</label></div>
+                                    <div class="col-8"><select name="" id="khoa" class="form-select">
+                                        <option value="2 tuần;5,000,000">2 tuần</option>
+                                        <option value="4 tuần;8,000,000">4 tuần</option>
+                                        <option value="6 tuần;9,000,000">6 tuần</option>
+                                    </select>
+                                    <span id="errkhoa"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4"><label for="" class="form-label">Học phí</label></div>
+                                    <div class="col-8"><input type="text" id="hocphi" class="form-control" disabled>
+                                        <span id="errhocphi"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4"><label for="" class="form-label">Ảnh đại diện</label></div>
+                                    <div class="col-8"><input type="file" id="hinh" class="form-control">
+                                        <span id="errhinh" class="text-danger"></span>   
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12"><button class="btn btn-success w-100">Lưu</button></div>
+                                </div>
+                           </form>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            let khoa = $('#khoa').val().split(';')[0];
+            let hp = $('#khoa').val().split(';')[1];
+            $('#hocphi').val(hp);
+            $('#hinh').change(function(){
+                    var allowedExtensions = /(\.png|\.jpg|\.gif)$/i;
+                    var filePath = $('#hinh').val();
+                    if (!allowedExtensions.exec(filePath)) {
+                        $('#errhinh').text('Vui lòng chọn một tệp ảnh có định dạng png, jpg hoặc gif.');
+                        $('#hinh').val('');
+                        return false;
+                    } else {
+                        $('#errhinh').text('');
+                    }
+            });
+            
+
+            $('#khoa').change(function(){
+                let khoa = $('#khoa').val().split(';')[0];
+                let hp = $('#khoa').val().split(';')[1];
+                $('#hocphi').val(hp);
+            });
+
+            $('#hoten').blur(function(e){
+                let hoten = $('#hoten').val();
+                let reg = /^([A-Z][a-z]*\s?){2,}$/;
+                if(!reg.test(hoten)){
+                    $('#errhoten').text('Họ và tên phải bắt đầu bằng ký tự hoa và có 2 từ trở lên');
+                }
+                else
+                $('#errhoten').text('*');
+            });
+            $('#sdt').blur(function(e){
+                let sdt = $('#sdt').val();
+                let reg = /^[0-9]{9}$/;
+                if(!reg.test(sdt)){
+                    $('#errsdt').text('Số điện thoại phải có dạng XXX-YYYYYY');
+                }
+                else
+                    $('#errsdt').text('*');
+            });
+            $('#ns').change(function(e){
+                let ns = $('#ns').val();
+                let hientai = new Date()
+                let namht = hientai.getFullYear()
+                let namsinh = new Date(ns).getFullYear()
+
+                let tuoi = namht - namsinh;
+
+                if(tuoi <= 15 || tuoi >= 18){
+                    $('#errdate').text('Tuổi phải trên 15 và dưới 18')
+                }
+                else
+                    $('#errdate').text('*')
+            });
+            let stt = 2;
+            $('#dk_form').submit(function(e){
+                e.preventDefault();
+
+                let hoten = $('#hoten').val();
+                let sdt = $('#sdt').val();
+                let ns = $('#ns').val();
+                let day = new Date(ns).getDate();
+                let month = new Date(ns).getMonth();
+                let year = new Date(ns).getFullYear();
+                ns = day + '/' + month + '/' + year;
+                let gt = $('#gt').val();
+                let diachi = $('#diachi').val();
+                let khoa = $('#khoa').val().split(';')[0];
+                let hp = $('#hocphi').val();
+                
+                let row = '<tr><td style="width: 50px;">' + stt + '</td><td style="width: 100px;">'+hoten+'</td><td style="width: 100px;">'+gt+'</td><td style="width: 100px;">'+sdt+'</td><td style="width: 100px;">'+ns+'</td><td style="width: 200px;">'+diachi+'</td><td style="width: 80px;">'+khoa+'</td><td style="width: 80px;">'+hp+'</td></tr>';
+                $('tbody').append(row);
+                stt++;
+                $('#authModal_DK').modal('hide');
+            });
+        });
+    </script>
+</body>
+</html>

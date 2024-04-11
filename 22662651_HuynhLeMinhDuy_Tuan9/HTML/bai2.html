@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="22662651-HuynhLeMinhDuy-Tuan09" content="Javascript – jQuery – Regular Expressions">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <script src="../JS/bootstrap.min.js"></script>
+    <script src="../JS/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <div class="container p-0" style="border: 1px solid black;">
+        <header style="background-image: url(../IMG/banner-5.png);height: 220px;">
+            
+        </header>
+        <nav style="border: 1px solid black;">
+            <ul class="d-flex gap-4 p-3 list-unstyled">
+                <li><a href="#" class="text-decoration-none">Đăng nhập</a></li>
+                <li><a href="" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#authModal_DK">Mở tour mới</a></li>
+            </ul>
+        </nav>
+        <section>
+            <div class="container p-0">
+                <h4 class="d-flex justify-content-center">DANH SÁCH TOUR-DU LỊCH VIỆT</h4>
+                <table style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Mã tour</th>
+                            <th>Hành trình</th>
+                            <th>Ngày khởi hành</th>
+                            <th>Thời gian</th>
+                            <th>Giá tour</th>
+                            <th>Ảnh đại diện</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="width: 50px;">1</td>
+                            <td style="width: 100px;">HNI-HCM-08-2018</td>
+                            <td style="width: 200px;">Hà Nội-Hồ Chí Minh 4 ngày 3 đêm</td>
+                            <td style="width: 100px;">2018-06-08</td>
+                            <td style="width: 100px;">4 ngày 3 đêm</td>
+                            <td style="width: 100px;">9000000</td>
+                            <td style="width: 80px;">HCM.jpg</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50px;">2</td>
+                            <td style="width: 100px;">HNI-DNG-08-2018</td>
+                            <td style="width: 200px;">Hà Nội-Huế-Đà Nẵng 5 ngày 4 đêm</td>
+                            <td style="width: 100px;">2018-06-08</td>
+                            <td style="width: 100px;">5 ngày 4 đêm</td>
+                            <td style="width: 100px;">10500000</td>
+                            <td style="width: 80px;">Hue.jpg</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+    <div class="modal fade" id="authModal_DK" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true" >
+        <div class="modal-dialog modal-dialog-centered" >
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <span>THÔNG TIN TOUR</span>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <!-- Tab Content -->
+                    <div class="tab-content mt-3">
+                        <!-- Login Tab -->
+                        <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                           <form id="dk_form">
+                                <div class="row">
+                                    <div class="col-4"><label for="" class="form-label">Mã tour</label></div>
+                                    <div class="col-8"><input type="text" id="matour" class="form-control">
+                                    <span id="errma" class="text-danger">*</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4"><label for="" class="form-label">Hành trình</label></div>
+                                    <div class="col-8"><input type="text" id="hanhtrinh" class="form-control">
+                                    <span id="ht" class="text-danger">*</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4"><label for="" class="form-label">Ngày khởi hành</label></div>
+                                    <div class="col-8"><input type="text" id="ngayKH" class="form-control">
+                                    <span id="nkh" class="text-danger">*</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4"><label for="" class="form-label">Thời gian</label></div>
+                                    <div class="col-8"><input type="text" id="tg" class="form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4"><label for="" class="form-label">Giá Tour</label></div>
+                                    <div class="col-8"><input type="text" id="gia" class="form-control" >
+                                        <span id="errgia" class="text-danger">*</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4"><label for="" class="form-label">Ảnh đại diện</label></div>
+                                    <div class="col-8"><input type="file" id="hinh" class="form-control">
+                                        <span id="errhinh" class="text-danger">*</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12"><button class="btn btn-success w-100">Lưu</button></div>
+                                </div>
+                           </form>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('#matour').blur(function(){
+                var matour = $('#matour').val();
+                let reg = /^[A-Z]{3}-[A-Z]{3}-[0-9]{2}-[0-9]{4}$/;
+                if(!reg.test(matour) ){
+                    $('#errma').text('Mã tour phải có dạng XXX-XXX-mm-yyyy');
+                }else{
+                    $('#errma').text('*');
+                }
+            });
+
+            $('#ngayKH').change(function(){
+                var ngayKH = $('#ngayKH').val();
+                let reg = /^([0-9]{2}[/][0-9]{2}[/][0-9]{4})$/;
+                if(!reg.test(ngayKH)){
+                    $('#nkh').text('Ngày khởi hành phải có dạng dd/mm/yyyy');
+                }else{
+                    $('#nkh').text('*');
+                }
+                var ngayKhoiHanh = new Date(ngayKH.split('/')[2], ngayKH.split('/')[1] - 1, ngayKH.split('/')[0]);
+                var ngayHienTai = new Date();
+                var ngaySau30Ngay = new Date();
+                ngaySau30Ngay.setDate(ngayHienTai.getDate() + 30);
+                
+                if (ngayKhoiHanh <= ngaySau30Ngay) {
+                    $('#nkh').text('Ngày khởi hành phải sau ngày hiện tại ít nhất 30 ngày.');
+                } else {
+                    $('#nkh').text('*');
+                }
+            });
+            $('#gia').blur(function(){
+                var gia = $('#gia').val();
+                let reg = /^[0-9]+$/;
+                if(!reg.test(gia)){
+                    $('#errgia').text('Giá tour phải là số');
+                }else if(gia < 0){
+                    $('#errgia').text('Giá tour phải lớn hơn 0');
+                }
+                else
+                    $('#errgia').text('*');
+            });
+
+            $('#hinh').change(function(){
+                    var allowedExtensions = /(\.png|\.jpg|\.gif)$/i;
+                    var filePath = $('#hinh').val();
+                    if (!allowedExtensions.exec(filePath)) {
+                        $('#errhinh').text('Vui lòng chọn một tệp ảnh có định dạng png, jpg hoặc gif.');
+                        $('#hinh').val('');
+                        return false;
+                    } else {
+                        $('#errhinh').text('');
+                    }
+            });
+            let stt = 3;
+            $("#dk_form").submit(function(e){
+                e.preventDefault();
+                var matour = $("#matour").val();
+                var hanhtrinh = $("#hanhtrinh").val();
+                var ngayKH = $("#ngayKH").val();
+                var tg = $("#tg").val();
+                var gia = $("#gia").val();
+                var hinh = $("#hinh").val();
+                if(matour == ""){
+                    $("#errma").text("Mã tour không được để trống");
+                    return false;
+                }
+                if(hanhtrinh == ""){
+                    $("#ht").text("Hành trình không được để trống");
+                    return false;
+                }
+                if(ngayKH == ""){
+                    $("#nkh").text("Ngày khởi hành không được để trống");
+                    return false;
+                }
+                if(gia == ""){
+                    $("#gia").text("Giá tour không được để trống");
+                    return false;
+                }
+                if(hinh == ""){
+                    $("#errhinh").text("Ảnh đại diện không được để trống");
+                    return false;
+                }
+                
+                let row = '<tr><td style="width: 50px;">' + stt + '</td><td style="width: 100px;">'+matour+'</td><td style="width: 200px;">'+hanhtrinh+'</td><td style="width: 100px;">'+ngayKH+'</td><td style="width: 100px;">'+tg+'</td><td style="width: 100px;">'+gia+'</td><td style="width: 80px;">'+hinh+'</td></tr>';
+                $("tbody").append(row);
+                stt++;
+                $('#authModal_DK').modal('hide');
+            });
+        });
+    </script>
+</body>
+</html>
