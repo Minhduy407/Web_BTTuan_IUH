@@ -151,7 +151,6 @@
             
 
             $('#khoa').change(function(){
-                let khoa = $('#khoa').val().split(';')[0];
                 let hp = $('#khoa').val().split(';')[1];
                 $('#hocphi').val(hp);
             });
@@ -179,7 +178,6 @@
                 let hientai = new Date()
                 let namht = hientai.getFullYear()
                 let namsinh = new Date(ns).getFullYear()
-
                 let tuoi = namht - namsinh;
 
                 if(tuoi <= 15 || tuoi >= 18){

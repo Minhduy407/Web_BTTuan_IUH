@@ -10,49 +10,129 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Menu</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-primary" type="submit">Search</button>
-                    </form>
-                </div>
-            </nav>
+        <header style="background-image: url(../IMG/website.png);height: 200px;">
         </header>
+        <nav>
+            <ul class="list-unstyled d-flex gap-3">
+                <li><a href="#">Trang chu</a></li>
+                <li><a href=""
+                    data-bs-toggle="modal"
+                        data-bs-target="#modalId">Dang ky</a>
+                </li>
+            </ul>
+        </nav>
         <section>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal_Login">
-                Login
-            </button>
-    
-            <div class="modal fade" id="Modal_Login" tabindex = "1" aria-labelledby="authModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">                
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label = "Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save</button>
+            <div
+                class="table-responsive"
+            >
+                <table
+                    class="table"
+                >
+                    <thead>
+                        <tr>
+                            <th scope="col">Ma</th>
+                            <th scope="col">Ho va ten</th>
+                            <th scope="col">Ngay thang nam sinh</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="width: 80px;">R1C1</td>
+                            <td style="width: 150px;">R1C2</td>
+                            <td style="width: 150px;">R1C3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </section>
+        <div
+                        class="modal fade"
+                        id="modalId"
+                        tabindex="-1"
+                        role="dialog"
+                        aria-labelledby="modalTitleId"
+                        aria-hidden="true"
+                    >
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modalTitleId">
+                                        THONG TIN DANG KY
+                                    </h5>
+                                    <button
+                                        type="button"
+                                        class="btn-close"
+                                        data-bs-dismiss="modal"
+                                        aria-label="Close"
+                                    ></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container-fluid">
+                                        <form id="Form_DK">
+                                            <div class="row">
+                                                <div class="col-4"><label class="form-label">Ma</label></div>
+                                                <div class="col-8"><input type="text" class="form-control" id="ma"><span class="text-danger" id="errma">*</span></div>
+                                                
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-4"><label class="form-label">Ten</label></div>
+                                                <div class="col-8"><input type="text" class="form-control" id="ten"><span class="text-danger" id="errten">*</span></div>
+                                                
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-4"><label class="form-label">Ngay sinh</label></div>
+                                                <div class="col-8"><input type="date" class="form-control" id="date"><span class="text-danger" id="errdate">*</span></div>
+                                                
+                                            </div>
+                                            <div class="row">
+                                                <button
+                                                    type="submit"
+                                                    class="btn btn-success w-100"
+                                                >
+                                                    Dang ky
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
     </div>
+    <script>
+        $(document).ready(function(){
+            $('#ma').blur(function(e){
+                let ma = $(this).val();
+                let reg = /^[A-Z][A-Za-z0-9]{3}$/
+                if(!reg.test(ma)){
+                    $('#errma').html("Ma phai co ")
+                    return;
+                }
+                else
+                    $('#errma').html("*")
+            })
+            $('#ten').blur(function(e){
+                let ma = $(this).val();
+                let reg = /^([A-Z][A-Za-z\s]*){2,}$/
+                if(!reg.test(ma)){
+                    $('#errten').html("Ten phai co 2 ")
+                    return;
+                }
+                else
+                    $('#errten').html("*")
+            })
+            $('#Form_DK').submit(function(e){
+                e.preventDefault()
+                let ma = $('#ma').val()
+                let ten = $('#ten').val()
+                let date = $('#date').val()
+
+                let row = '<tr><td style="width: 80px;">' + ma +'</td>' + '<td style="width: 150px;">' + ten +'</td>' + '<td style="width: 150px;">' + date +'</td></tr>'
+                $("tbody").append(row)
+                // $('#modalId').modal('hide')
+            })
+        });
+    </script>
 </body>
 </html>
